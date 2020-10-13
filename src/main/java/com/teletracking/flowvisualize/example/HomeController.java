@@ -5,12 +5,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/ping")
+@RequestMapping
 public class HomeController {
     
-    private static final String ROOT = "/";
-    
-    @GetMapping(ROOT)
+    @GetMapping("/ping")
     public HelloMessage home() {
         return new HelloMessage("Hello, World!");
     }
