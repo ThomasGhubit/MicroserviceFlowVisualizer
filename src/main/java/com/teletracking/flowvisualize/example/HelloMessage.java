@@ -1,4 +1,4 @@
-package com.teletracking.flowvisualize.model;
+package com.teletracking.flowvisualize.example;
 
 import java.time.LocalDateTime;
 
@@ -6,11 +6,6 @@ public final class HelloMessage {
     
     private final String message;
     private final LocalDateTime time;
-    
-    @SuppressWarnings("unused")
-    private HelloMessage(){
-        this(null);
-    }
     
     public HelloMessage(String message) {
         this.message = message;
