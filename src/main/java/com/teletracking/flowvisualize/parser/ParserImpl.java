@@ -14,7 +14,6 @@ import org.springframework.util.FileCopyUtils;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
-import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -36,19 +35,19 @@ class ParserImpl implements Parser {
     }
 
     @Override
-    public Set<SdfDefinition> retrieveDefinitions() {
-        Set<SdfDefinition> definitions = new HashSet<>();
+    public Set<ServiceDescription> retrieveDefinitions() {
         return bitBucketReader.findBitBucketRepositories()
             .stream()
-            .flatMap( this::convertToSdfDefinition )
+            .flatMap( this::convertToServiceDescription )
             .collect( Collectors.toSet() );
     }
 
-    private Stream<SdfDefinition> convertToSdfDefinition( BitBucketRepository repository ) {
+    private Stream<ServiceDescription> convertToServiceDescription( BitBucketRepository repository ) {
         return readCachedSdfFile( repository )
                 // Connect to bitbucket for sdf definition
 //            .or( () -> bitBucketReader.readSdfDefinition( repository ) )
             .flatMap( contents -> readYaml( repository, contents ) )
+            .map( sdfDefinition -> new ServiceDescription( repository, sdfDefinition ) )
             .stream();
     }
 

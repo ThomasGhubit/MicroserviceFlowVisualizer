@@ -1,5 +1,9 @@
 package com.teletracking.flowvisualize.parser;
 
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 public class SdfDefinition {
 
     private String name;
@@ -38,6 +42,40 @@ public class SdfDefinition {
 
     public void setConsumes( SdfConsumes consumes ) {
         this.consumes = consumes;
+    }
+
+    public Set<SdfEvent> getConsumedEvents() {
+        return new HashSet<>( consumes.getEvents().values() );
+    }
+
+    public Set<SdfCommand> getConsumedCommands() {
+        return new HashSet<>( consumes.getCommands().values() );
+    }
+
+    public Set<SdfEvent> getProducedEvents() {
+        return consumes.getCommands().values().stream()
+            .flatMap( command -> command.getProducedEvents().stream() )
+            .collect( Collectors.toSet() );
+    }
+
+    public Set<SdfCommand> getProducedCommands() {
+        return consumes.getEvents().values().stream()
+            .flatMap( event -> event.getProducedCommands().stream() )
+            .collect( Collectors.toSet() );
+    }
+
+    public Set<SdfEvent> getAllEvents() {
+        HashSet<SdfEvent> allEvents = new HashSet<>();
+        allEvents.addAll( getConsumedEvents() );
+        allEvents.addAll( getProducedEvents() );
+        return allEvents;
+    }
+
+    public Set<SdfCommand> getAllCommands() {
+        HashSet<SdfCommand> allCommands = new HashSet<>();
+        allCommands.addAll( getConsumedCommands() );
+        allCommands.addAll( getProducedCommands() );
+        return allCommands;
     }
 
 }

@@ -3,7 +3,7 @@ package com.teletracking.flowvisualize.middleware;
 import com.teletracking.flowvisualize.engine.Engine;
 import com.teletracking.flowvisualize.engine.GraphedModel;
 import com.teletracking.flowvisualize.parser.Parser;
-import com.teletracking.flowvisualize.parser.SdfDefinition;
+import com.teletracking.flowvisualize.parser.ServiceDescription;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,7 +29,7 @@ public class Controller {
 
     @GetMapping("/visualize")
     public GraphedModel visualizeFlow() {
-        Set<SdfDefinition> definitions = parser.retrieveDefinitions();
+        Set<ServiceDescription> definitions = parser.retrieveDefinitions();
 
         return engine.buildModel( definitions );
     }

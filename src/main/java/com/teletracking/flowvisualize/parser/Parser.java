@@ -4,6 +4,6 @@ import java.util.Set;
 
 public interface Parser {
 
-    Set<SdfDefinition> retrieveDefinitions();
+    Set<ServiceDescription> retrieveDefinitions();
 
 }
