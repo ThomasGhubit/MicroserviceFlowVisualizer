@@ -1,22 +1,22 @@
 package com.teletracking.flowvisualize.engine;
 
-import java.util.List;
+import java.util.Set;
 
 public class GraphedModel {
 
-    private final List<Node> nodes;
-    private final List<Edge> edges;
+    private final Set<Node> nodes;
+    private final Set<Edge> edges;
 
-    public GraphedModel( List<Node> nodes, List<Edge> edges ) {
+    GraphedModel( Set<Node> nodes, Set<Edge> edges ) {
         this.nodes = nodes;
         this.edges = edges;
     }
 
-    public List<Node> getNodes() {
+    public Set<Node> getNodes() {
         return nodes;
     }
 
-    public List<Edge> getEdges() {
+    public Set<Edge> getEdges() {
         return edges;
     }
 

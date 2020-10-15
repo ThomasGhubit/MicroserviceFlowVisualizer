@@ -1,13 +1,13 @@
 package com.teletracking.flowvisualize.engine;
 
-import java.util.Map;
+import java.util.Objects;
 
 public class Node {
 
     private final String name;
-    private final Map<String, ?> attributes;
+    private final Style attributes;
 
-    public Node( String name, Map<String, ?> attributes ) {
+    Node( String name, Style attributes ) {
         this.name = name;
         this.attributes = attributes;
     }
@@ -16,8 +16,22 @@ public class Node {
         return name;
     }
 
-    public Map<String, ?> getAttributes() {
+    public Style getAttributes() {
         return attributes;
+    }
+
+    @Override
+    public boolean equals( Object o ) {
+        if ( this == o ) return true;
+        if ( o == null || getClass() != o.getClass() ) return false;
+        Node node = ( Node ) o;
+        return Objects.equals( name, node.name ) &&
+            Objects.equals( attributes, node.attributes );
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash( name, attributes );
     }
 
 }
