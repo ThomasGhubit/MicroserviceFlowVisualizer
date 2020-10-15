@@ -3,6 +3,7 @@ package com.teletracking.flowvisualize.middleware;
 import com.teletracking.flowvisualize.engine.Edge;
 import com.teletracking.flowvisualize.engine.GraphedModel;
 import com.teletracking.flowvisualize.engine.Node;
+import com.teletracking.flowvisualize.engine.Style;
 
 class DisplayInfo {
     public int repulsion = 2600;
@@ -31,12 +32,7 @@ public class GraphResponse {
         }
         src_builder.append("\n");
         for (Node node : model.getNodes()){
-            String attributes = "{";
-            for (String attr : node.getAttributes().keySet()) {
-                attributes += String.format("%s:%s, ", attr, node.getAttributes().get(attr));
-            }
-            attributes = attributes.substring(0, attributes.length()-2) + "}";
-            src_builder.append(String.format("%s {%s}\n", node.getName(), attributes));
+            src_builder.append(String.format("%s {color:%s, label:%s}\n", node.getName(), node.getAttributes().getColor(), node.getAttributes().getLabel()));
         }
 
         this.src = src_builder.toString();
