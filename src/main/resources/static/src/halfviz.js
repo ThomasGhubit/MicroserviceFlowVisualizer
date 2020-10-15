@@ -150,7 +150,7 @@
   $(document).ready(function(){
     $.ajax({
       // url: "/visualize"
-      url: "/model/visulaize.json"
+      url: "/model/visualize.json"
     }).then(function(data) {
 
       var browserify = require('browserify-fs');
