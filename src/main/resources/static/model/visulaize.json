@@ -1,0 +1,13 @@
+{
+  "_id": "visulaize",
+  "_rev": "1-e8ceaebda42a2c5a76d6684ff9d867da",
+  "sys": {
+	"repulsion": 2600,
+	"friction": 0.5,
+	"stiffness": 512,
+	"gravity": true
+  },
+  "src": "1 -> 4\n1 -> 12\n4 -> 21\n4 -> 23\n7 -> 34\n7 -> 13\n7 -> 44\n\n; endings\n1 {color:#444, shape:dot, label:·}\n6 {color:#c6531e}\n13 {color:#c6531e}\n21 {color:#c6531e}\n34 {color:#db8e3c}\n44 {color:#b01700}\n47 {color:#ffe35f}\n65 {color:#c6531e}\n72 {color:#b01700}\n77 {color:#b01700}\n79 {color:#b01700}\n83 {color:#b01700}\n84 {color:#b01700}\n94 {color:#b01700}\n97 {color:#db8e3c}\n99 {color:#95cde5}\n100 {color:#ffe35f}\n104 {color:#c6531e}\n106 {color:#ffe35f}\n110 {color:#b01700}",
+  "example": "cyoa",
+  "title": "visulaize"
+}
