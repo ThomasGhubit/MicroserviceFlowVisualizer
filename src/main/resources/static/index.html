@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>arbor.js » halfviz</title>
+	<title>Visualizer</title>
 	<meta name="generator" content="TextMate http://macromates.com/">
 	<meta name="author" content="Christian Swinehart">
 	<!-- Date: 2010-12-20 -->
@@ -16,7 +16,10 @@
     <canvas id="viewport" width="800" height="600"></canvas>
     <div id="editor">
       <div class="io">
-        <div class="ctrl"><a href="#" class="new">clear</a><a class="examples" href="#">examples <span></span></a></div>
+        <div class="ctrl">
+          <a href="#" class="new">clear</a>
+          <a class="examples" href="#">examples <span></span></a>
+        </div>
         <ul class="dialog"></ul>
       </div>
       <textarea id="code"></textarea>  
@@ -25,16 +28,10 @@
   </div>  
 
   <div id="dashboard">
-    <a href="#" class="about active"><div class="popup"><img src="style/nub.png">About</div>about halfviz</a>
-    <a href="#" class="help">syntax help</a>
     <ul class="controls">
-      <li class="stiffness">spring tension <span class="frob">10,000</span></li>
-      <li class="repulsion">node repulsion <span class="frob">10,000</span></li>
-      <li class="friction">friction <span class="frob">20%</span></li>
-      <li class="gravity">gravity <span class="toggle">.</span></li>
+      <li class="frob"><span class="frob">Microservice Flow Visualizer</span></li>
     </ul>
   </div>
-
 
   <script src="lib/jquery-1.6.1.min.js"></script>
   <script src="lib/jquery.address-1.4.min.js"></script>
@@ -49,8 +46,8 @@
   <script src="src/renderer.js"></script>
   
   <!-- the main driver code: start here -->
-  <script src="src/halfviz.js"></script> 
+  <script src="src/halfviz.js"></script>
 
-  
+
 </body>
 </html>
