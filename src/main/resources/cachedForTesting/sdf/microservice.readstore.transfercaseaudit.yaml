@@ -1,0 +1,93 @@
+---
+name: "TransferCaseAudit"
+type: "readstore"
+version: "0.0.1"
+consumes:
+  commands:
+    GetTransferCaseAudit:
+      name: "GetTransferCaseAudit"
+      schemaUri: "https://sv.telesv.com/schemas/GetTransferCaseAudit_v1.001.json"
+
+  events:
+    PatientVisitUpdatedEvent:
+      name: "PatientVisitUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientVisitUpdatedEvent_v1.001.json"
+    PatientVisitCreatedEvent:
+      name: "PatientVisitCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientVisitCreatedEvent_v1.001.json"
+    IsolationCreatedEvent:
+      name: "IsolationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/IsolationCreatedEvent_v1.001.json"
+    IsolationUpdatedEvent:
+      name: "IsolationUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/IsolationUpdatedEvent_v1.001.json"
+
+    OrganismCreatedEvent:
+      name: "OrganismCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/OrganismCreatedEvent_v1.001.json"
+    OrganismUpdatedEvent:
+      name: "OrganismUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/OrganismUpdatedEvent_v1.001.json"
+
+    MedicalAlertCreatedEvent:
+      name: "MedicalAlertCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/MedicalAlertCreatedEvent_v1.001.json"
+    MedicalAlertUpdatedEvent:
+      name: "MedicalAlertUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/MedicalAlertUpdatedEvent_v1.001.json"
+
+    TreatmentCreatedEvent:
+      name: "TreatmentCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/TreatmentCreatedEvent_v1.001.json"
+    TreatmentUpdatedEvent:
+      name: "TreatmentUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/TreatmentUpdatedEvent_v1.001.json"
+
+    ReferralCreatedEvent:
+      name: "ReferralCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/ReferralCreated_v1.003.json"
+    ReferralUpdatedEvent:
+      name: "ReferralUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/ReferralUpdated_v1.003.json"
+
+    PhysicianCreatedEvent:
+      name: "PhysicianCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCreatedEvent_v1.001.json"
+    PhysicianUpdatedEvent:
+      name: "PhysicianUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianUpdatedEvent_v1.001.json"
+
+    FacilityCreatedEvent:
+      name: "FacilityCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCreatedEvent_v1.003.json"
+    FacilityUpdatedEvent:
+      name: "FacilityUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityUpdatedEvent_v1.003.json"
+
+    TransferReasonCreatedEvent:
+      name: "TransferReasonCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/TransferReasonCreatedEvent_v1.001.json"
+    TransferReasonUpdatedEvent:
+      name: "TransferReasonUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/TransferReasonUpdatedEvent_v1.001.json"
+
+    SpecialtyCreatedEvent:
+      name: "SpecialtyCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/SpecialtyCreatedEvent_v1.001.json"
+    SpecialtyUpdatedEvent:
+      name: "SpecialtyUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/SpecialtyUpdatedEvent_v1.001.json"
+
+    CaseCreatedEvent:
+      name: "CaseCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseCreatedEvent_v1.004.json"
+    CaseUpdatedEvent:
+      name: "CaseUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseUpdatedEvent_v1.004.json"
+
+    CaseTypeCreatedEvent:
+      name: "CaseTypeCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseTypeCreatedEvent_v1.001.json"
+    CaseTypeUpdatedEvent:
+      name: "CaseTypeUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseTypeUpdatedEvent_v1.001.json"

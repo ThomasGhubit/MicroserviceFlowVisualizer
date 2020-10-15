@@ -1,0 +1,108 @@
+---
+name: "CreateRequest"
+type: "readstore"
+version: "1.0.0"
+consumes:
+    events:
+        TaskDefinitionCreated:
+            name: "TaskDefinitionCreated"
+            schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionCreated_v1.001.json"
+        TaskDefinitionUpdated:
+            name: "TaskDefinitionUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionUpdated_v1.001.json"
+        TaskDefinitionAttributeCategoryCreated:
+            name: "TaskDefinitionAttributeCategoryCreated"
+            schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionAttributeCategoryCreated_v1.001.json"
+        TaskDefinitionAttributeCategoryUpdated:
+            name: "TaskDefinitionAttributeCategoryUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionAttributeCategoryUpdated_v1.001.json"
+        BedLocationCreatedEvent:
+            name: "BedLocationCreatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/BedLocationCreatedEvent_v2.001.json"
+        BedLocationUpdatedEvent:
+            name: "BedLocationUpdatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/BedLocationUpdatedEvent_v2.001.json"
+        UnitCreatedEvent:
+            name: "UnitCreatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/UnitCreatedEvent_v1.004.json"
+        UnitUpdatedEvent:
+            name: "UnitUpdatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/UnitUpdatedEvent_v1.004.json"
+        LocationAssociationCreatedEvent:
+            name: "LocationAssociationCreatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/LocationAssociationCreatedEvent_v1.002.json"
+        LocationAssociationUpdatedEvent:
+            name: "LocationAssociationUpdatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/LocationAssociationUpdatedEvent_v1.002.json"
+        DeliveryJobCreated:
+            name: "DeliveryJobCreated"
+            schemaUri: "https://sv.telesv.com/schemas/DeliveryJobCreated_v2.001.json"
+        DeliveryJobUpdated:
+            name: "DeliveryJobUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/DeliveryJobUpdated_v2.001.json"
+        PickupJobCreated:
+            name: "PickupJobCreated"
+            schemaUri: "https://sv.telesv.com/schemas/PickupJobCreated_v2.001.json"
+        PickupJobUpdated:
+            name: "PickupJobUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/PickupJobUpdated_v2.001.json"
+        ServiceJobCreated:
+            name: "ServiceJobCreated"
+            schemaUri: "https://sv.telesv.com/schemas/ServiceJobCreated_v2.001.json"
+        ServiceJobUpdated:
+            name: "ServiceJobUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/ServiceJobUpdated_v2.001.json"
+        StaffJobCreated:
+            name: "StaffJobCreated"
+            schemaUri: "https://sv.telesv.com/schemas/StaffJobCreated_v2.001.json"
+        StaffJobUpdated:
+            name: "StaffJobUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/StaffJobUpdated_v2.001.json"
+        ResponsibilityCreated:
+            name: "ResponsibilityCreated"
+            schemaUri: "https://sv.telesv.com/schemas/ResponsibilityCreated_v1.002.json"
+        ResponsibilityUpdated:
+            name: "ResponsibilityUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/ResponsibilityUpdated_v1.002.json"
+        ResponsibilityDeleted:
+            name: "ResponsibilityDeleted"
+            schemaUri: "https://sv.telesv.com/schemas/ResponsibilityDeleted_v1.002.json"
+        StaffCreatedEvent:
+            name: "StaffCreatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/StaffCreatedEvent_v2.002.json"
+        StaffUpdatedEvent:
+            name: "StaffUpdatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/StaffUpdatedEvent_v1.002.json"
+        StaffAssignedToBedLocation:
+            name: "StaffAssignedToBedLocation"
+            schemaUri: "https://sv.telesv.com/schemas/StaffAssignedToBedLocation_v1.001.json"
+
+    commands:
+        GetTaskDefinitionList:
+            name: "GetTaskDefinitionList"
+            schemaUri: "https://sv.telesv.com/schemas/GetTaskDefinitionList_v1.001.json"
+            viewModelSchemaUri: "https://sv.telesv.com/schemas/TaskDefinitionListViewModel_v1.001.json"
+        GetStackingLocationListForUnit:
+            name: "GetStackingLocationListForUnit"
+            schemaUri: "https://sv.telesv.com/schemas/GetStackingLocationListForUnit_v1.001.json"
+            viewModelSchemaUri: "https://sv.telesv.com/schemas/StackingLocationListForUnitViewModel_v1.001.json"
+        GetDeliveryJobDetails:
+            name: "GetDeliveryJobDetails"
+            schemaUri: "https://sv.telesv.com/schemas/GetDeliveryJobDetails_v1.001.json"
+            viewModelSchemaUri: "https://sv.telesv.com/schemas/DeliveryJobDetailsViewModel_v2.001.json"
+        GetPickupJobDetails:
+            name: "GetPickupJobDetails"
+            schemaUri: "https://sv.telesv.com/schemas/GetPickupJobDetails_v1.001.json"
+            viewModelSchemaUri: "https://sv.telesv.com/schemas/PickupJobDetailsViewModel_v2.001.json"
+        GetServiceJobDetails:
+            name: "GetServiceJobDetails"
+            schemaUri: "https://sv.telesv.com/schemas/GetServiceJobDetails_v1.001.json"
+            viewModelSchemaUri: "https://sv.telesv.com/schemas/ServiceJobDetailsViewModel_v2.001.json"
+        GetStaffJobDetails:
+            name: "GetStaffJobDetails"
+            schemaUri: "https://sv.telesv.com/schemas/GetStaffJobDetails_v1.001.json"
+            viewModelSchemaUri: "https://sv.telesv.com/schemas/StaffJobDetailsViewModel_v2.002.json"
+        GetAssignedStaffList:
+            name: "GetAssignedStaffList"
+            schemaUri: "https://sv.telesv.com/schemas/GetAssignedStaffList_v1.001.json"
+            viewModelSchemaUri: "https://sv.telesv.com/schemas/AssignedStaffListViewModel_v1.001.json"

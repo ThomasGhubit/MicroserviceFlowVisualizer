@@ -1,0 +1,203 @@
+---
+name: "TransferCaseLog"
+type: "readstore"
+version: "0.0.1"
+consumes:
+  events:
+    CaseNoteCreated:
+      name: "CaseNoteCreated"
+      schemaUri: "https://sv.telesv.com/schemas/CaseNoteCreated_v2.001.json"
+    UserCreatedEvent:
+      name: "UserCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UserCreatedEvent_v1.002.json"
+    TagCreatedEvent:
+      name: "TagCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/TagCreatedEvent_v1.001.json"
+    ModeOfContactCreatedEvent:
+      name: "ModeOfContactCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/ModeOfContactCreatedEvent_v1.001.json"
+    DispositionReasonCreatedEvent:
+      name: "DispositionReasonCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/DispositionReasonCreatedEvent_v2.001.json"
+    PhysicianCaseCommunicationOutcomeCreatedEvent:
+      name: "PhysicianCaseCommunicationOutcomeCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationOutcomeCreatedEvent_v2.002.json"
+    PhysicianCaseCommunicationContactCreatedEvent:
+      name: "PhysicianCaseCommunicationContactCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationContactCreatedEvent_v2.001.json"
+    FacilityCaseCommunicationOutcomeCreatedEvent:
+      name: "FacilityCaseCommunicationOutcomeCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationOutcomeCreatedEvent_v2.001.json"
+    FacilityCaseCommunicationContactCreatedEvent:
+      name: "FacilityCaseCommunicationContactCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationContactCreatedEvent_v2.001.json"
+    EscalationRoleCreatedEvent:
+      name: "EscalationRoleCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationRoleCreatedEvent_v1.001.json"
+    EscalationCaseCommunicationContactCreatedEvent:
+      name: "EscalationCaseCommunicationContactCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationCaseCommunicationContactCreatedEvent_v2.002.json"
+    EscalationCaseCommunicationOutcomeCreatedEvent:
+      name: "EscalationCaseCommunicationOutcomeCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationCaseCommunicationOutcomeCreatedEvent_v2.002.json"
+    CaseNoteUpdatedEvent:
+      name: "CaseNoteUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseNoteUpdated_v2.001.json"
+    UserUpdatedEvent:
+      name: "UserUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UserUpdatedEvent_v1.002.json"
+    TagUpdatedEvent:
+      name: "TagUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/TagUpdatedEvent_v1.001.json"
+    ModeOfContactUpdatedEvent:
+      name: "ModeOfContactUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/ModeOfContactUpdatedEvent_v1.001.json"
+    DispositionReasonUpdatedEvent:
+      name: "DispositionReasonUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/DispositionReasonUpdatedEvent_v2.001.json"
+    PhysicianCaseCommunicationOutcomeUpdatedEvent:
+      name: "PhysicianCaseCommunicationOutcomeUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationOutcomeUpdatedEvent_v2.002.json"
+    PhysicianCaseCommunicationContactUpdatedEvent:
+      name: "PhysicianCaseCommunicationContactUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationContactUpdatedEvent_v2.001.json"
+    FacilityCaseCommunicationOutcomeUpdatedEvent:
+      name: "FacilityCaseCommunicationOutcomeUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationOutcomeUpdatedEvent_v2.001.json"
+    FacilityCaseCommunicationContactUpdatedEvent:
+      name: "FacilityCaseCommunicationContactUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationContactUpdatedEvent_v2.001.json"
+    EscalationRoleUpdatedEvent:
+      name: "EscalationRoleUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationRoleUpdatedEvent_v1.001.json"
+    EscalationCaseCommunicationContactUpdatedEvent:
+      name: "EscalationCaseCommunicationContactUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationCaseCommunicationContactUpdatedEvent_v2.002.json"
+    EscalationCaseCommunicationOutcomeUpdatedEvent:
+      name: "EscalationCaseCommunicationOutcomeUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationCaseCommunicationOutcomeUpdatedEvent_v2.002.json"
+    CaseNoteDeleted:
+      name: "CaseNoteDeleted"
+      schemaUri: "https://sv.telesv.com/schemas/CaseNoteDeleted_v2.001.json"
+    UserDeletedEvent:
+      name: "UserDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UserDeletedEvent_v1.002.json"
+    TagDeletedEvent:
+      name: "TagDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/TagDeletedEvent_v1.001.json"
+    ModeOfContactDeletedEvent:
+      name: "ModeOfContactDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/ModeOfContactDeletedEvent_v1.001.json"
+    DispositionReasonDeletedEvent:
+      name: "DispositionReasonDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/DispositionReasonDeletedEvent_v2.001.json"
+    PhysicianCaseCommunicationOutcomeDeletedEvent:
+      name: "PhysicianCaseCommunicationOutcomeDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationOutcomeDeletedEvent_v2.002.json"
+    PhysicianCaseCommunicationContactDeletedEvent:
+      name: "PhysicianCaseCommunicationContactDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationContactDeletedEvent_v2.001.json"
+    FacilityCaseCommunicationOutcomeDeletedEvent:
+      name: "FacilityCaseCommunicationOutcomeDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationOutcomeDeletedEvent_v2.001.json"
+    FacilityCaseCommunicationContactDeletedEvent:
+      name: "FacilityCaseCommunicationContactDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationContactDeletedEvent_v2.001.json"
+    EscalationRoleDeletedEvent:
+      name: "EscalationRoleDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationRoleDeletedEvent_v1.001.json"
+    EscalationCaseCommunicationContactDeletedEvent:
+      name: "EscalationCaseCommunicationContactDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationCaseCommunicationContactDeletedEvent_v2.002.json"
+    EscalationCaseCommunicationOutcomeDeletedEvent:
+      name: "EscalationCaseCommunicationOutcomeDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationCaseCommunicationOutcomeDeletedEvent_v2.002.json"
+    FacilityCreatedEvent:
+      name: "FacilityCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCreatedEvent_v1.003.json"
+    PhysicianCreatedEvent:
+      name: "PhysicianCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCreatedEvent_v1.001.json"
+    FacilityUpdatedEvent:
+      name: "FacilityUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityUpdatedEvent_v1.003.json"
+    PhysicianUpdatedEvent:
+      name: "PhysicianUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianUpdatedEvent_v1.001.json"
+    CaseIssueCreatedEvent:
+      name: "CaseIssueCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseIssueCreated_v1.001.json"
+    CaseIssueUpdatedEvent:
+      name: "CaseIssueUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseIssueUpdated_v1.001.json"
+    CaseIssueDeletedEvent:
+      name: "CaseIssueDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseIssueDeleted_v1.001.json"
+    FacilityCaseCommunicationContactNoteCreated:
+      name: "FacilityCaseCommunicationContactNoteCreated"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationContactNoteCreated_v1.001.json"
+    FacilityCaseCommunicationContactNoteUpdated:
+      name: "FacilityCaseCommunicationContactNoteUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationContactNoteUpdated_v1.001.json"
+    FacilityCaseCommunicationContactNoteDeleted:
+      name: "FacilityCaseCommunicationContactNoteDeleted"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationContactNoteDeleted_v1.001.json"
+    FacilityCaseCommunicationOutcomeNoteCreatedEvent:
+      name: "FacilityCaseCommunicationOutcomeNoteCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationOutcomeNoteCreated_v1.001.json"
+    FacilityCaseCommunicationOutcomeNoteUpdatedEvent:
+      name: "FacilityCaseCommunicationOutcomeNoteUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationOutcomeNoteUpdated_v1.001.json"
+    FacilityCaseCommunicationOutcomeNoteDeletedEvent:
+      name: "FacilityCaseCommunicationOutcomeNoteDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationOutcomeNoteDeleted_v1.001.json"
+    EscalationRoleCaseCommunicationContactNoteCreatedEvent:
+      name: "EscalationRoleCaseCommunicationContactNoteCreated"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationRoleCaseCommunicationContactNoteCreated_v1.001.json"
+    EscalationRoleCaseCommunicationContactNoteUpdatedEvent:
+      name: "EscalationRoleCaseCommunicationContactNoteUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationRoleCaseCommunicationContactNoteUpdated_v1.001.json"
+    EscalationRoleCaseCommunicationContactNoteDeletedEvent:
+      name: "EscalationRoleCaseCommunicationContactNoteDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationRoleCaseCommunicationContactNoteDeleted_v1.001.json"
+    EscalationRoleCaseCommunicationOutcomeNoteCreated:
+      name: "EscalationRoleCaseCommunicationOutcomeNoteCreated"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationRoleCaseCommunicationOutcomeNoteCreated_v1.001.json"
+    EscalationRoleCaseCommunicationOutcomeNoteUpdated:
+      name: "EscalationRoleCaseCommunicationOutcomeNoteUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationRoleCaseCommunicationOutcomeNoteUpdated_v1.001.json"
+    EscalationRoleCaseCommunicationOutcomeNoteDeleted:
+      name: "EscalationRoleCaseCommunicationOutcomeNoteDeleted"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationRoleCaseCommunicationOutcomeNoteDeleted_v1.001.json"
+    PhysicianCaseCommunicationContactNoteCreatedEvent:
+      name: "PhysicianCaseCommunicationContactNoteCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationContactNoteCreated_v1.001.json"
+    PhysicianCaseCommunicationContactNoteUpdatedEvent:
+      name: "PhysicianCaseCommunicationContactNoteUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationContactNoteUpdated_v1.001.json"
+    PhysicianCaseCommunicationContactNoteDeletedEvent:
+      name: "PhysicianCaseCommunicationContactNoteDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationContactNoteDeleted_v1.001.json"
+    PhysicianCaseCommunicationOutcomeNoteCreatedEvent:
+      name: "PhysicianCaseCommunicationOutcomeNoteCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationOutcomeNoteCreated_v1.001.json"
+    PhysicianCaseCommunicationOutcomeNoteUpdatedEvent:
+      name: "PhysicianCaseCommunicationOutcomeNoteUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationOutcomeNoteUpdated_v1.001.json"
+    PhysicianCaseCommunicationOutcomeNoteDeletedEvent:
+      name: "PhysicianCaseCommunicationOutcomeNoteDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationOutcomeNoteDeleted_v1.001.json"
+    CaseIssueCommentCreatedEvent:
+      name: "CaseIssueCommentCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseIssueCommentCreated_v1.001.json"
+    CaseIssueCommentUpdatedEvent:
+      name: "CaseIssueCommentUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseIssueCommentUpdated_v1.001.json"
+    CaseIssueCommentDeletedEvent:
+      name: "CaseIssueCommentDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseIssueCommentDeleted_v1.001.json"
+  commands:
+    GetCaseLogHistory:
+      name: "GetCaseLogHistory"
+      schemaUri: "https://sv.telesv.com/schemas/GetCaseLogHistory_v1.001.json"
+      viewModelSchemaUri: "https://sv.telesv.com/schemas/TransferCaseLogViewModel_v1.005.json"

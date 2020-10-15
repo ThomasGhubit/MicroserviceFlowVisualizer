@@ -1,0 +1,11 @@
+---
+name: "CommandStatusReadStore"
+type: "readstore"
+version: "1.0.0"
+consumes:
+  events:
+  commands:
+    GetCommandStatuses:
+      name: "GetCommandStatuses"
+      schemaUri: "https://sv.telesv.com/schemas/GetCommandStatuses_v1.001.json"
+      viewModelSchemaUri: "https://sv.telesv.com/schemas/CommandStatusesViewModel_v1.001.json"

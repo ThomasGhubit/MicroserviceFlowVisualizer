@@ -1,0 +1,115 @@
+---
+name: "Responsibility"
+type: "transactional"
+version: "1.0.0"
+consumes:
+  events:
+    ResponsibilityCreated:
+      name: "ResponsibilityCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ResponsibilityCreated_v1.003.json"
+    ResponsibilityUpdated:
+      name: "ResponsibilityUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/ResponsibilityUpdated_v1.003.json"
+    SkillCreated:
+      name: "SkillCreated"
+      schemaUri: "https://sv.telesv.com/schemas/SkillCreated_v1.001.json"
+    UnitResponsibilitiesCreated:
+      name: "UnitResponsibilitiesCreated"
+      schemaUri: "https://sv.telesv.com/schemas/UnitResponsibilitiesCreated_v1.001.json"
+    UnitResponsibilitiesUpdated:
+      name: "UnitResponsibilitiesUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/UnitResponsibilitiesUpdated_v1.001.json"
+    UnitCreatedEvent:
+      name: "UnitCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UnitCreatedEvent_v1.004.json"
+    PositionCreated:
+      name: "PositionCreated"
+      schemaUri: "https://sv.telesv.com/schemas/PositionCreated_v1.001.json"
+    DepartmentCreatedEvent:
+      name: "DepartmentCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/DepartmentCreatedEvent_v1.002.json"
+    DepartmentDisplaySettingsForProcedureResponsibilitiesCreated:
+      name: "DepartmentDisplaySettingsForProcedureResponsibilitiesCreated"
+      schemaUri: "https://sv.telesv.com/schemas/DepartmentDisplaySettingsForProcedureResponsibilitiesCreated_v2.001.json"
+    CoverageDefinitionCreated:
+      name: "CoverageDefinitionCreated"
+      schemaUri: "https://sv.telesv.com/schemas/CoverageDefinitionCreated_v1.001.json"
+    ZoneTypeCreated:
+      name: "ZoneTypeCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ZoneTypeCreated_v1.001.json"
+    CoverageDefinitionUpdated:
+      name: "CoverageDefinitionUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/CoverageDefinitionUpdated_v1.001.json"
+  commands:
+    CreateResponsibility:
+      name: "CreateResponsibility"
+      schemaUri: "https://sv.telesv.com/schemas/CreateResponsibility_v1.003.json"
+      roles:
+        - "Administrator"
+      domainEvent:
+        name: "ResponsibilityCreated"
+        schemaUri: "https://sv.telesv.com/schemas/ResponsibilityCreated_v1.003.json"
+      events:
+        CreateResponsibilityFailed:
+          name: "CreateResponsibilityFailed"
+          schemaUri: "https://sv.telesv.com/schemas/CreateResponsibilityFailed_v1.001.json"
+    UpdateResponsibility:
+      name: "UpdateResponsibility"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateResponsibility_v1.003.json"
+      roles:
+        - "Administrator"
+      domainEvent:
+        name: "ResponsibilityUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/ResponsibilityUpdated_v1.003.json"
+      events:
+        UpdateResponsibilityFailed:
+          name: "UpdateResponsibilityFailed"
+          schemaUri: "https://sv.telesv.com/schemas/UpdateResponsibilityFailed_v1.001.json"
+    CreateUnitResponsibilities:
+      name: "CreateUnitResponsibilities"
+      schemaUri: "https://sv.telesv.com/schemas/CreateUnitResponsibilities_v1.001.json"
+      roles:
+        - "Administrator"
+      domainEvent:
+        name: "UnitResponsibilitiesCreated"
+        schemaUri: "https://sv.telesv.com/schemas/UnitResponsibilitiesCreated_v1.001.json"
+    UpdateUnitResponsibilities:
+      name: "UpdateUnitResponsibilities"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateUnitResponsibilities_v1.001.json"
+      roles:
+        - "Administrator"
+      domainEvent:
+        name: "UnitResponsibilitiesUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/UnitResponsibilitiesUpdated_v1.001.json"
+    CreateDepartmentDisplaySettingsForProcedureResponsibilities:
+      name: "CreateDepartmentDisplaySettingsForProcedureResponsibilities"
+      schemaUri: "https://sv.telesv.com/schemas/CreateDepartmentDisplaySettingsForProcedureResponsibilities_v2.001.json"
+      roles:
+        - "Administrator"
+      domainEvent:
+        name: "DepartmentDisplaySettingsForProcedureResponsibilitiesCreated"
+        schemaUri: "https://sv.telesv.com/schemas/DepartmentDisplaySettingsForProcedureResponsibilitiesCreated_v2.001.json"
+    CreateCoverageDefinition:
+      name: "CreateCoverageDefinition"
+      schemaUri: "https://sv.telesv.com/schemas/CreateCoverageDefinition_v1.001.json"
+      roles:
+        - "Administrator"
+      domainEvent:
+        name: "CoverageDefinitionCreated"
+        schemaUri: "https://sv.telesv.com/schemas/CoverageDefinitionCreated_v1.001.json"
+      events:
+        CreateCoverageDefinitionFailed:
+          name: "CreateCoverageDefinitionFailed"
+          schemaUri: "https://sv.telesv.com/schemas/CreateCoverageDefinitionFailed_v1.001.json"
+    UpdateCoverageDefinition:
+      name: "UpdateCoverageDefinition"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateCoverageDefinition_v1.001.json"
+      roles:
+        - "Administrator"
+      domainEvent:
+        name: "CoverageDefinitionUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/CoverageDefinitionUpdated_v1.001.json"
+      events:
+        UpdateCoverageDefinitionFailed:
+          name: "UpdateCoverageDefinitionFailed"
+          schemaUri: "https://sv.telesv.com/schemas/UpdateCoverageDefinitionFailed_v1.001.json"

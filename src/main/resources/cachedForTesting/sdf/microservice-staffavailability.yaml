@@ -1,0 +1,53 @@
+---
+name: "StaffAvailability"
+type: "transactional"
+version: "1.0.0"
+consumes:
+  events:
+    BreakTypeCreated:
+      name: "BreakTypeCreated"
+      schemaUri: "https://sv.telesv.com/schemas/BreakTypeCreated_v1.001.json"
+    BreakTypeUpdated:
+      name: "BreakTypeUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/BreakTypeUpdated_v1.001.json"
+    BreakTypeDeleted:
+      name: "BreakTypeDeleted"
+      schemaUri: "https://sv.telesv.com/schemas/BreakTypeDeleted_v1.001.json"
+    StaffBreakStarted:
+      name: "StaffBreakStarted"
+      schemaUri: "https://sv.telesv.com/schemas/StaffBreakStarted_v1.001.json"
+    StaffActivityStatusChanged:
+      name: "StaffActivityStatusChanged"
+      schemaUri: "https://sv.telesv.com/schemas/StaffActivityStatusChanged_v1.001.json"
+    StaffCreatedEvent:
+      name: "StaffCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/StaffCreatedEvent_v2.002.json"
+    StaffUpdatedEvent:
+      name: "StaffUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/StaffUpdatedEvent_v1.002.json"
+  commands:
+    CreateBreakType:
+      name: "CreateBreakType"
+      schemaUri: "https://sv.telesv.com/schemas/CreateBreakType_v1.001.json"
+      domainEvent:
+        name: "BreakTypeCreated"
+        schemaUri: "https://sv.telesv.com/schemas/BreakTypeCreated_v1.001.json"
+    UpdateBreakType:
+      name: "UpdateBreakType"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateBreakType_v1.001.json"
+      domainEvent:
+        name: "BreakTypeUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/BreakTypeUpdated_v1.001.json"
+    StartStaffBreak:
+      name: "StartStaffBreak"
+      schemaUri: "https://sv.telesv.com/schemas/StartStaffBreak_v1.001.json"
+      domainEvent:
+        name: "StaffBreakStarted"
+        schemaUri: "https://sv.telesv.com/schemas/StaffBreakStarted_v1.001.json"
+      events:
+        StaffActivityStatusChanged:
+          name: "StaffActivityStatusChanged"
+          schemaUri: "https://sv.telesv.com/schemas/StaffActivityStatusChanged_v1.001.json"
+        StartStaffBreakFailed:
+          name: "StartStaffBreakFailed"
+          schemaUri: "https://sv.telesv.com/schemas/StartStaffBreakFailed_v1.001.json"

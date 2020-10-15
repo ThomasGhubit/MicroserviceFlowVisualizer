@@ -1,0 +1,215 @@
+---
+name: "Job"
+type: "transactional"
+version: "1.0.0"
+consumes:
+    events:
+        PatientCreatedEvent:
+            name: "PatientCreatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/PatientCreatedEvent_v2.001.json"
+        PatientUpdatedEvent:
+            name: "PatientUpdatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/PatientUpdatedEvent_v2.001.json"
+        ProcedureAppointmentCreated:
+            name: "ProcedureAppointmentCreated"
+            schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentCreated_v1.002.json"
+        ProcedureAppointmentUpdated:
+            name: "ProcedureAppointmentUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentUpdated_v1.002.json"
+        BedLocationCreatedEvent:
+            name: "BedLocationCreatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/BedLocationCreatedEvent_v2.001.json"
+        BedLocationUpdatedEvent:
+            name: "BedLocationUpdatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/BedLocationUpdatedEvent_v2.001.json"
+        BedLocationDeletedEvent:
+            name: "BedLocationDeletedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/BedLocationDeletedEvent_v1.001.json"
+        TaskDefinitionCreated:
+            name: "TaskDefinitionCreated"
+            schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionCreated_v1.001.json"
+        TaskDefinitionDeleted:
+            name: "TaskDefinitionDeleted"
+            schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionDeleted_v1.001.json"
+        TaskDefinitionUpdated:
+            name: "TaskDefinitionUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionUpdated_v1.001.json"
+        TaskDefinitionAttributeCategoryCreated:
+            name: "TaskDefinitionAttributeCategoryCreated"
+            schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionAttributeCategoryCreated_v1.001.json"
+        TaskDefinitionAttributeCategoryUpdated:
+            name: "TaskDefinitionAttributeCategoryUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionAttributeCategoryUpdated_v1.001.json"
+        TaskDefinitionAttributeCategoryDeleted:
+            name: "TaskDefinitionAttributeCategoryDeleted"
+            schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionAttributeCategoryDeleted_v1.001.json"
+        StaffCreatedEvent:
+            name: "StaffCreatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/StaffCreatedEvent_v2.001.json"
+        StaffUpdatedEvent:
+            name: "StaffUpdatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/StaffUpdatedEvent_v1.001.json"
+        StaffDeletedEvent:
+            name: "StaffDeletedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/StaffDeletedEvent_v1.001.json"
+        ServiceJobCreated:
+            name: "ServiceJobCreated"
+            schemaUri: "https://sv.telesv.com/schemas/ServiceJobCreated_v2.001.json"
+        DeliveryJobCreated:
+            name: "DeliveryJobCreated"
+            schemaUri: "https://sv.telesv.com/schemas/DeliveryJobCreated_v2.001.json"
+        PickupJobCreated:
+            name: "PickupJobCreated"
+            schemaUri: "https://sv.telesv.com/schemas/PickupJobCreated_v2.001.json"
+        StaffJobCreated:
+            name: "StaffJobCreated"
+            schemaUri: "https://sv.telesv.com/schemas/StaffJobCreated_v2.001.json"
+        StaffJobStatusChanged:
+            name: "StaffJobStatusChanged"
+            schemaUri: "https://sv.telesv.com/schemas/StaffJobStatusChanged_v1.001.json"
+        ServiceJobStatusChanged:
+            name: "ServiceJobStatusChanged"
+            schemaUri: "https://sv.telesv.com/schemas/ServiceJobStatusChanged_v1.002.json"
+        DeliveryJobStatusChanged:
+            name: "DeliveryJobStatusChanged"
+            schemaUri: "https://sv.telesv.com/schemas/DeliveryJobStatusChanged_v1.002.json"
+        PickupJobStatusChanged:
+            name: "PickupJobStatusChanged"
+            schemaUri: "https://sv.telesv.com/schemas/PickupJobStatusChanged_v1.002.json"
+        ServiceJobUpdated:
+            name: "ServiceJobUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/ServiceJobUpdated_v2.001.json"
+        DeliveryJobUpdated:
+            name: "DeliveryJobUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/DeliveryJobUpdated_v2.001.json"
+        PickupJobUpdated:
+            name: "PickupJobUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/PickupJobUpdated_v2.001.json"
+        StaffJobUpdated:
+            name: "StaffJobUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/StaffJobUpdated_v2.001.json"
+    commands:
+        CreateServiceJob:
+            name: "CreateServiceJob"
+            schemaUri: "https://sv.telesv.com/schemas/CreateServiceJob_v2.001.json"
+            roles:
+                - "Administrator"
+            domainEvent:
+                name: "ServiceJobCreated"
+                schemaUri: "https://sv.telesv.com/schemas/ServiceJobCreated_v2.001.json"
+            events:
+                ServiceJobStatusChanged:
+                    name: "ServiceJobStatusChanged"
+                    schemaUri: "https://sv.telesv.com/schemas/ServiceJobStatusChanged_v1.002.json"
+                CreateServiceJobFailed:
+                    name: "CreateServiceJobFailed"
+                    schemaUri: "https://sv.telesv.com/schemas/CreateServiceJobFailed_v3.001.json"
+        CreateDeliveryJob:
+            name: "CreateDeliveryJob"
+            schemaUri: "https://sv.telesv.com/schemas/CreateDeliveryJob_v2.001.json"
+            roles:
+                - "Administrator"
+            domainEvent:
+                name: "DeliveryJobCreated"
+                schemaUri: "https://sv.telesv.com/schemas/DeliveryJobCreated_v2.001.json"
+            events:
+                DeliveryJobStatusChanged:
+                    name: "DeliveryJobStatusChanged"
+                    schemaUri: "https://sv.telesv.com/schemas/DeliveryJobStatusChanged_v1.002.json"
+                CreateDeliveryJobFailed:
+                    name: "CreateDeliveryJobFailed"
+                    schemaUri: "https://sv.telesv.com/schemas/CreateDeliveryJobFailed_v3.001.json"
+        CreatePickupJob:
+            name: "CreatePickupJob"
+            schemaUri: "https://sv.telesv.com/schemas/CreatePickupJob_v2.001.json"
+            roles:
+                - "Administrator"
+            domainEvent:
+                name: "PickupJobCreated"
+                schemaUri: "https://sv.telesv.com/schemas/PickupJobCreated_v2.001.json"
+            events:
+                PickupJobStatusChanged:
+                    name: "PickupJobStatusChanged"
+                    schemaUri: "https://sv.telesv.com/schemas/PickupJobStatusChanged_v1.002.json"
+                CreatePickupJobFailed:
+                    name: "CreatePickupJobFailed"
+                    schemaUri: "https://sv.telesv.com/schemas/CreatePickupJobFailed_v3.001.json"
+        CreateStaffJob:
+            name: "CreateStaffJob"
+            schemaUri: "https://sv.telesv.com/schemas/CreateStaffJob_v2.001.json"
+            roles:
+                - "Administrator"
+            domainEvent:
+                name: "StaffJobCreated"
+                schemaUri: "https://sv.telesv.com/schemas/StaffJobCreated_v2.001.json"
+            events:
+                StaffJobStatusChanged:
+                    name: "StaffJobStatusChanged"
+                    schemaUri: "https://sv.telesv.com/schemas/StaffJobStatusChanged_v1.001.json"
+                CreateStaffJobFailed:
+                    name: "CreateStaffJobFailed"
+                    schemaUri: "https://sv.telesv.com/schemas/CreateStaffJobFailed_v3.001.json"
+        CancelDeliveryJob:
+            name: "CancelDeliveryJob"
+            schemaUri: "https://sv.telesv.com/schemas/CancelDeliveryJob_v1.001.json"
+            roles:
+                - "Administrator"
+            domainEvent:
+                name: "DeliveryJobStatusChanged"
+                schemaUri: "https://sv.telesv.com/schemas/DeliveryJobStatusChanged_v1.002.json"
+        UpdateDeliveryJob:
+            name: "UpdateDeliveryJob"
+            schemaUri: "https://sv.telesv.com/schemas/UpdateDeliveryJob_v2.001.json"
+            roles:
+                - "Administrator"
+            domainEvent:
+                name: "DeliveryJobUpdated"
+                schemaUri: "https://sv.telesv.com/schemas/DeliveryJobUpdated_v2.001.json"
+        CancelPickupJob:
+            name: "CancelPickupJob"
+            schemaUri: "https://sv.telesv.com/schemas/CancelPickupJob_v1.001.json"
+            roles:
+                - "Administrator"
+            domainEvent:
+                name: "PickupJobStatusChanged"
+                schemaUri: "https://sv.telesv.com/schemas/PickupJobStatusChanged_v1.002.json"
+        CancelServiceJob:
+            name: "CancelServiceJob"
+            schemaUri: "https://sv.telesv.com/schemas/CancelServiceJob_v1.001.json"
+            roles:
+                - "Administrator"
+            domainEvent:
+                name: "ServiceJobStatusChanged"
+                schemaUri: "https://sv.telesv.com/schemas/ServiceJobStatusChanged_v1.002.json"
+        UpdatePickupJob:
+            name: "UpdatePickupJob"
+            schemaUri: "https://sv.telesv.com/schemas/UpdatePickupJob_v2.001.json"
+            roles:
+                - "Administrator"
+            domainEvent:
+                name: "PickupJobUpdated"
+                schemaUri: "https://sv.telesv.com/schemas/PickupJobUpdated_v2.001.json"
+        UpdateServiceJob:
+            name: "UpdateServiceJob"
+            schemaUri: "https://sv.telesv.com/schemas/UpdateServiceJob_v2.001.json"
+            roles:
+                - "Administrator"
+            domainEvent:
+                name: "ServiceJobUpdated"
+                schemaUri: "https://sv.telesv.com/schemas/ServiceJobUpdated_v2.001.json"
+        CancelStaffJob:
+            name: "CancelStaffJob"
+            schemaUri: "https://sv.telesv.com/schemas/CancelStaffJob_v1.001.json"
+            roles:
+                - "Administrator"
+            domainEvent:
+                name: "StaffJobStatusChanged"
+                schemaUri: "https://sv.telesv.com/schemas/StaffJobStatusChanged_v1.001.json"
+        UpdateStaffJob:
+            name: "UpdateStaffJob"
+            schemaUri: "https://sv.telesv.com/schemas/UpdateStaffJob_v2.001.json"
+            roles:
+                - "Administrator"
+            domainEvent:
+                name: "StaffJobUpdated"
+                schemaUri: "https://sv.telesv.com/schemas/StaffJobUpdated_v2.001.json"

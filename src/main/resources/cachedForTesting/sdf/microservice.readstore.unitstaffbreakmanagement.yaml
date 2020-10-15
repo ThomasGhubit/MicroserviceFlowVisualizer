@@ -1,0 +1,66 @@
+---
+name: "UnitStaffBreakManagement"
+type: "readstore"
+version: "1.0.0"
+consumes:
+  events:
+    UnitCoverageCreated:
+      name: "UnitCoverageCreated"
+      schemaUri: "https://sv.telesv.com/schemas/UnitCoverageCreated_v1.001.json"
+    UnitCoverageUpdated:
+      name: "UnitCoverageUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/UnitCoverageUpdated_v1.001.json"
+    StaffCreatedEvent:
+      name: "StaffCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/StaffCreatedEvent_v2.002.json"
+    StaffUpdatedEvent:
+      name: "StaffUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/StaffUpdatedEvent_v1.002.json"
+    PositionCreated:
+      name: "PositionCreated"
+      schemaUri: "https://sv.telesv.com/schemas/PositionCreated_v1.001.json"
+    PositionUpdated:
+      name: "PositionUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/PositionUpdated_v1.001.json"
+    PositionDeleted:
+      name: "PositionDeleted"
+      schemaUri: "https://sv.telesv.com/schemas/PositionDeleted_v1.001.json"
+    StaffActivityStatusChanged:
+      name: "StaffActivityStatusChanged"
+      schemaUri: "https://sv.telesv.com/schemas/StaffActivityStatusChanged_v1.001.json"
+    BreakTypeCreated:
+      name: "BreakTypeCreated"
+      schemaUri: "https://sv.telesv.com/schemas/BreakTypeCreated_v1.001.json"
+    BreakTypeUpdated:
+      name: "BreakTypeUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/BreakTypeUpdated_v1.001.json"
+    BreakTypeDeleted:
+      name: "BreakTypeDeleted"
+      schemaUri: "https://sv.telesv.com/schemas/BreakTypeDeleted_v1.001.json"
+    StaffBreakStarted:
+      name: "StaffBreakStarted"
+      schemaUri: "https://sv.telesv.com/schemas/StaffBreakStarted_v1.001.json"
+    StaffBreakEnded:
+      name: "StaffBreakEnded"
+      schemaUri: "https://sv.telesv.com/schemas/StaffBreakEnded_v1.001.json"
+    StaffAssignmentForBedLocationCreated:
+      name: "StaffAssignmentForBedLocationCreated"
+      schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForBedLocationCreated_v1.001.json"
+    StaffAssignmentForBedLocationUpdated:
+      name: "StaffAssignmentForBedLocationUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForBedLocationUpdated_v1.001.json"
+    StaffAssignmentForUnitCreated:
+      name: "StaffAssignmentForUnitCreated"
+      schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForUnitCreated_v1.001.json"
+    StaffAssignmentForUnitUpdated:
+      name: "StaffAssignmentForUnitUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForUnitUpdated_v1.001.json"
+    LocationAssociationCreatedEvent:
+      name: "LocationAssociationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationCreatedEvent_v2.002.json"
+    LocationAssociationUpdatedEvent:
+      name: "LocationAssociationUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationUpdatedEvent_v2.002.json"
+    LocationAssociationDeletedEvent:
+      name: "LocationAssociationDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationDeletedEvent_v2.002.json"

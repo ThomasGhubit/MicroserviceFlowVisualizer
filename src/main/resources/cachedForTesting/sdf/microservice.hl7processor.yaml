@@ -1,0 +1,47 @@
+---
+name: "HL7Processor"
+version: "1.0.0"
+consumes:
+  events:
+    HL7S12MessageCreated:
+      name: "HL7S12MessageCreated"
+      schemaUri: "https://sv.telesv.com/schemas/HL7S12MessageCreated_v1.002.json"
+    HL7S14MessageCreated:
+      name: "HL7S14MessageCreated"
+      schemaUri: "https://sv.telesv.com/schemas/HL7S14MessageCreated_v1.001.json"
+    PatientCreated:
+      name: "PatientCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientCreatedEvent_v1.001.json"
+    PatientUpdated:
+      name: "PatientUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientUpdatedEvent_v1.001.json"
+    AppointmentCreated:
+      name: "AppointmentCreated"
+      schemaUri: "https://sv.telesv.com/schemas/AppointmentCreated_v1.002.json"
+    AppointmentUpdated:
+      name: "AppointmentUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/AppointmentUpdated_v1.002.json"
+    BedLocationCreatedEvent:
+      name: "BedLocationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationCreatedEvent_v1.001.json"
+    PatientProcedureCreatedEvent:
+      name: "PatientProcedureCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientProcedureCreatedEvent_v1.001.json"
+    PatientProcedureUpdatedEvent:
+      name: "PatientProcedureUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientProcedureUpdatedEvent_v1.001.json"
+    FacilityCreatedEvent:
+      name: "FacilityCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCreatedEvent_v1.003.json"
+    UnitCreatedEvent:
+      name: "UnitCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UnitCreatedEvent_v1.004.json"
+    DepartmentCreatedEvent:
+      name: "DepartmentCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/DepartmentCreatedEvent_v1.002.json"
+    LocationAssociationCreatedEvent:
+      name: "LocationAssociationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationCreatedEvent_v1.002.json"
+    LocationAssociationDeletedEvent:
+      name: "LocationAssociationDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationDeletedEvent_v1.002.json"

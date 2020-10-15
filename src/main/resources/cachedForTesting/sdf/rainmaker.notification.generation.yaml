@@ -1,0 +1,28 @@
+---
+name: "Rain"
+type: "readstore"
+version: "1.0.0"
+consumes:
+  events:
+    # This should be replaced by the events (if any) you want to consume
+    TemplateCreateEvent:
+      name: "TemplateCreateEvent"
+      schemaUri: "http://localhost:8765/templateCreate"
+    TemplateUpdateEvent:
+      name: "TemplateUpdateEvent"
+      schemaUri: "http://localhost:8765/templateUpdate"
+    PlacementInstantNotificationEvent:
+      name: "PlacementInstantNotificationEvent"
+      schemaUri: "http://localhost:8765/placementInstantNotificationEvent"
+
+  commands:
+    # This should be replaced by the commands (if any) you want to issue
+    PlacementInstantNotificationRequestedCommand:
+      name: "PlacementInstantNotificationRequestedCommand"
+      schemaUri: "http://localhost:8765/PlacementInstantNotificationRequestedCommand"
+      roles:
+        - "ADMIN"
+      events:
+        PlacementInstantNotificationEvent:
+          name: "PlacementInstantNotificationEvent"
+          schemaUri: "http://localhost:8765/placementInstantNotificationEvent"

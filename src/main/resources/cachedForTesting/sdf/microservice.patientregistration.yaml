@@ -1,0 +1,16 @@
+---
+name: "PatientRegistration"
+version: "1.0.0"
+consumes:
+  events:
+    RegistrationStatusChanged:
+      name: "RegistrationStatusChanged"
+      schemaUri: "https://sv.telesv.com/schemas/RegistrationStatusChanged_v1.001.json"
+  commands:
+    ChangeRegistrationStatus:
+      name: "ChangeRegistrationStatus"
+      schemaUri: "https://sv.telesv.com/schemas/ChangeRegistrationStatus_v1.001.json"
+      events:
+        RegistrationStatusChanged:
+          name: "RegistrationStatusChanged"
+          schemaUri: "https://sv.telesv.com/schemas/RegistrationStatusChanged_v1.001.json"

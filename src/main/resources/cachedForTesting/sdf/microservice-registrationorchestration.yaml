@@ -1,0 +1,11 @@
+---
+name: "RegistrationOrchestration"
+type: "orchestration"
+version: "1.0.0"
+consumes:
+  commands:
+    MarkPatientArrivedToLocation:
+      name: "MarkPatientArrivedToLocation"
+      schemaUri: "https://sv.telesv.com/schemas/MarkPatientArrivedToLocation_v1.001.json"
+      roles:
+        - "Registration Administrator"

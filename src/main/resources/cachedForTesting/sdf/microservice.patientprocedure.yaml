@@ -1,0 +1,34 @@
+---
+name: "PatientProcedure"
+type: "transactional"
+version: "1.0.0"
+consumes:
+  events:
+    PatientProcedureCreatedEvent:
+      name: "PatientProcedureCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientProcedureCreated_v2.002.json"
+    PatientProcedureUpdatedEvent:
+      name: "PatientProcedureUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientProcedureUpdated_v2.002.json"
+    PatientProcedureDeletedEvent:
+      name: "PatientProcedureDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientProcedureDeleted_v1.001.json"
+  commands:
+    CreatePatientProcedure:
+      name: "CreatePatientProcedure"
+      schemaUri: "https://sv.telesv.com/schemas/CreatePatientProcedure_v2.002.json"
+      domainEvent:
+        name: "PatientProcedureCreatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/PatientProcedureCreated_v2.002.json"
+    UpdatePatientProcedure:
+      name: "UpdatePatientProcedure"
+      schemaUri: "https://sv.telesv.com/schemas/UpdatePatientProcedure_v2.002.json"
+      domainEvent:
+        name: "PatientProcedureUpdatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/PatientProcedureUpdated_v2.002.json"
+    DeletePatientProcedure:
+      name: "DeletePatientProcedure"
+      schemaUri: "https://sv.telesv.com/schemas/DeletePatientProcedure_v1.001.json"
+      domainEvent:
+        name: "PatientProcedureDeletedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/PatientProcedureDeleted_v1.001.json"

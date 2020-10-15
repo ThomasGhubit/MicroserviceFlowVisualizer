@@ -1,0 +1,140 @@
+---
+name: "Staff"
+type: "transactional"
+version: "1.0.0"
+consumes:
+  events:
+    StaffCreatedEvent:
+      name: "StaffCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/StaffCreatedEvent_v2.002.json"
+    StaffUpdatedEvent:
+      name: "StaffUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/StaffUpdatedEvent_v1.002.json"
+    PositionCreated:
+      name: "PositionCreated"
+      schemaUri: "https://sv.telesv.com/schemas/PositionCreated_v1.001.json"
+    FacilityCreatedEvent:
+      name: "FacilityCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCreatedEvent_v1.003.json"
+    SkillGroupCreated:
+      name: "SkillGroupCreated"
+      schemaUri: "https://sv.telesv.com/schemas/SkillGroupCreated_v1.001.json"
+    StaffSkillsChanged:
+      name: "StaffSkillsChanged"
+      schemaUri: "https://sv.telesv.com/schemas/StaffSkillsChanged_v1.001.json"
+    SkillCreated:
+      name: "SkillCreated"
+      schemaUri: "https://sv.telesv.com/schemas/SkillCreated_v1.001.json"
+    SkillUpdated:
+      name: "SkillUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/SkillUpdated_v1.001.json"
+    SkillDeleted:
+      name: "SkillDeleted"
+      schemaUri: "https://sv.telesv.com/schemas/SkillDeleted_v1.001.json"
+    SkillGroupUpdated:
+      name: "SkillGroupUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/SkillGroupUpdated_v1.001.json"
+    SkillGroupDeleted:
+      name: "SkillGroupDeleted"
+      schemaUri: "https://sv.telesv.com/schemas/SkillGroupDeleted_v1.001.json"
+    PositionUpdated:
+      name: "PositionUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/PositionUpdated_v1.001.json"
+    PositionDeleted:
+      name: "PositionDeleted"
+      schemaUri: "https://sv.telesv.com/schemas/PositionDeleted_v1.001.json"
+  commands:
+    CreateStaff:
+      name: "CreateStaff"
+      schemaUri: "https://sv.telesv.com/schemas/CreateStaff_v1.003.json"
+      roles:
+        - "Registration Administrator"
+        - "ORCHESTRATOR"
+      domainEvent:
+        name: "StaffCreatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/StaffCreatedEvent_v2.002.json"
+      events:
+        StaffSkillsChanged:
+          name: "StaffSkillsChanged"
+          schemaUri: "https://sv.telesv.com/schemas/StaffSkillsChanged_v1.001.json"
+    UpdateStaff:
+      name: "UpdateStaff"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateStaff_v1.003.json"
+      roles:
+        - "Registration Administrator"
+        - "ORCHESTRATOR"
+      domainEvent:
+        name: "StaffUpdatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/StaffUpdatedEvent_v1.002.json"
+      events:
+        StaffSkillsChanged:
+          name: "StaffSkillsChanged"
+          schemaUri: "https://sv.telesv.com/schemas/StaffSkillsChanged_v1.001.json"
+    CreateSkillGroup:
+      name: "CreateSkillGroup"
+      schemaUri: "https://sv.telesv.com/schemas/CreateSkillGroup_v1.001.json"
+      roles:
+        - "Administrator"
+      domainEvent:
+        name: "SkillGroupCreated"
+        schemaUri: "https://sv.telesv.com/schemas/SkillGroupCreated_v1.001.json"
+    UpdateSkillGroup:
+      name: "UpdateSkillGroup"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateSkillGroup_v1.001.json"
+      roles:
+        - "Administrator"
+      domainEvent:
+        name: "SkillGroupUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/SkillGroupUpdated_v1.001.json"
+    DeleteSkillGroup:
+      name: "DeleteSkillGroup"
+      schemaUri: "https://sv.telesv.com/schemas/DeleteSkillGroup_v1.001.json"
+      roles:
+        - "Administrator"
+      domainEvent:
+        name: "SkillGroupDeleted"
+        schemaUri: "https://sv.telesv.com/schemas/SkillGroupDeleted_v1.001.json"
+      events:
+        PositionUpdated:
+          name: "PositionUpdated"
+          schemaUri: "https://sv.telesv.com/schemas/PositionUpdated_v1.001.json"
+    CreatePosition:
+      name: "CreatePosition"
+      schemaUri: "https://sv.telesv.com/schemas/CreatePosition_v1.002.json"
+      roles:
+        - "Administrator"
+      domainEvent:
+        name: "PositionCreated"
+        schemaUri: "https://sv.telesv.com/schemas/PositionCreated_v1.001.json"
+    UpdatePosition:
+      name: "UpdatePosition"
+      schemaUri: "https://sv.telesv.com/schemas/UpdatePosition_v1.001.json"
+      roles:
+        - "Administrator"
+      domainEvent:
+        name: "PositionUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/PositionUpdated_v1.001.json"
+    CreateSkill:
+      name: "CreateSkill"
+      schemaUri: "https://sv.telesv.com/schemas/CreateSkill_v1.001.json"
+      roles:
+        - "Administrator"
+      domainEvent:
+        name: "SkillCreated"
+        schemaUri: "https://sv.telesv.com/schemas/SkillCreated_v1.001.json"
+    UpdateSkill:
+      name: "UpdateSkill"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateSkill_v1.001.json"
+      roles:
+        - "Administrator"
+      domainEvent:
+        name: "SkillUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/SkillUpdated_v1.001.json"
+    DeleteSkill:
+      name: "DeleteSkill"
+      schemaUri: "https://sv.telesv.com/schemas/DeleteSkill_v1.001.json"
+      roles:
+        - "Administrator"
+      domainEvent:
+        name: "SkillDeleted"
+        schemaUri: "https://sv.telesv.com/schemas/SkillDeleted_v1.001.json"
