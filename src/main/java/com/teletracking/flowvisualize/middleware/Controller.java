@@ -3,37 +3,22 @@ package com.teletracking.flowvisualize.middleware;
 import com.teletracking.flowvisualize.engine.Engine;
 import com.teletracking.flowvisualize.engine.GraphedModel;
 import com.teletracking.flowvisualize.parser.Parser;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.teletracking.flowvisualize.parser.SdfDefinition;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
-import org.springframework.boot.web.client.RestTemplateBuilder;
+
+import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping
 public class Controller {
 
-    @Service
-    public class RestService {
-        private final RestTemplate restTemplate;
-
-        public RestService(RestTemplateBuilder restTemplateBuilder) {
-            this.restTemplate = restTemplateBuilder.build();
-        }
-
-        public String getPostsPlainJSON(String url) {
-            return this.restTemplate.getForObject(url, String.class);
-        }
-    }
-
-
-
-    @Autowired
     private Engine engine;
 
-    @Autowired
     private Parser parser;
     
     @GetMapping("/ping")
@@ -42,10 +27,13 @@ public class Controller {
     }
 
     @GetMapping("/visualize")
-    public GraphedModel visualizeFlow() {
-        //String url = "https://bitbucket.org/teleadmin/" + repositoryName + "/src/master/src/main/resources/com.teletracking.yml";
-        //String data = new Controller().new RestService(null).getPostsPlainJSON(url);
-        // engine.buildModel(parser.parseData(data));
-        return engine.buildModel();
+    public Set<GraphedModel> visualizeFlow() {
+        Set<SdfDefinition> definitions = new HashSet<>();
+        try {
+            definitions = parser.retrieveDefinitions();
+        } catch(IOException e){
+            System.out.println(e.getMessage());
+        }
+        return definitions.stream().map(definition -> engine.buildModel(definition)).collect(Collectors.toSet());
     }
 }
