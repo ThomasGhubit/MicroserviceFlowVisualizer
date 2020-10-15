@@ -1,7 +1,6 @@
 package com.teletracking.flowvisualize.middleware;
 
 import com.teletracking.flowvisualize.engine.Engine;
-import com.teletracking.flowvisualize.engine.GraphedModel;
 import com.teletracking.flowvisualize.parser.Parser;
 import com.teletracking.flowvisualize.parser.ServiceDescription;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,9 +27,11 @@ public class Controller {
     }
 
     @GetMapping("/visualize")
-    public GraphedModel visualizeFlow() {
+    public String visualizeFlow() {
         Set<ServiceDescription> definitions = parser.retrieveDefinitions();
 
-        return engine.buildModel( definitions );
+        return GraphResponse.buildTextOutput(
+            engine.buildModel( definitions )
+        );
     }
 }

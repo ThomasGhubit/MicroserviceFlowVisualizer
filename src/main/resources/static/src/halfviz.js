@@ -65,7 +65,7 @@
       graph:null,
 
       newDoc:function(){
-        _code.val(that.graph.src).focus()
+        _code.val(that.graph).focus()
         $.address.value("")
         that.updateGraph()
         that.resize()
@@ -150,8 +150,8 @@
     var mcp = HalfViz("#halfviz");
 
     $.ajax({
-      // url: "/visualize"
-      url: "/model/visualize.json"
+      url: "/visualize"
+      //url: "/model/visualize.json"
     }).then(function(data) {
       mcp.graph = data;
       mcp.newDoc();

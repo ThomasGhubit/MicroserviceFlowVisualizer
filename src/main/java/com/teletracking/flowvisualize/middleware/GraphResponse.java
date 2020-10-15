@@ -1,21 +1,32 @@
 package com.teletracking.flowvisualize.middleware;
 
-class DisplayInfo {
-    public int repulsion = 2600;
-    public double friction = 0.5;
-    public int stiffness = 512;
-    public boolean gravity = true;
-}
+import com.teletracking.flowvisualize.engine.GraphedModel;
 
-public class GraphResponse {
-    public String  _id = "Viz";
-    public String  _rev = "1-e8ceaebda42a2c5a76d6684ff9d867da";
-    public DisplayInfo sys = new DisplayInfo();
-    public String src;
-    public String example= "cyoa";
-    public String title = "Viz";
+class GraphResponse {
 
-    public GraphResponse(String source) {
-        this.src = source;
+    private GraphResponse() {}
+
+    static String buildTextOutput( GraphedModel model ) {
+        StringBuilder sb = new StringBuilder();
+
+        model.getEdges().forEach( edge ->
+            sb.append( edge.getSource() )
+                .append( " -> ")
+                .append( edge.getDestination() )
+                .append( '\n' )
+        );
+        sb.append( '\n' );
+
+        model.getNodes().forEach( node ->
+            sb.append( node.getName() )
+                .append( " {color:" )
+                .append( node.getAttributes().getColor() )
+                .append( ", label:" )
+                .append( node.getAttributes().getLabel() )
+                .append( "}\n" )
+        );
+
+        return sb.toString();
     }
+
 }

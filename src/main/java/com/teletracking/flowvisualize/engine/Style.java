@@ -7,7 +7,7 @@ public class Style {
     private final String color;
     private final String label;
 
-    Style( String color, String label ) {
+    Style( String label, String color ) {
         this.color = color;
         this.label = label;
     }
