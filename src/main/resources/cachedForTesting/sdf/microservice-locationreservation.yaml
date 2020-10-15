@@ -1,0 +1,62 @@
+---
+name: "LocationReservation"
+type: "transactional"
+version: "1.0.0"
+consumes:
+  events:
+    BedLocationCreatedEvent:
+      name: "BedLocationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationCreatedEvent_v2.001.json"
+    BedLocationUpdatedEvent:
+      name: "BedLocationUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationUpdatedEvent_v2.001.json"
+    ProcedureAppointmentCreated:
+      name: "ProcedureAppointmentCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentCreated_v1.001.json"
+    LocationReservationCreated:
+      name: "LocationReservationCreated"
+      schemaUri: "https://sv.telesv.com/schemas/LocationReservationCreated_v1.003.json"
+    LocationReservationUpdated:
+      name: "LocationReservationUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/LocationReservationUpdated_v1.003.json"
+    LocationReservationDeleted:
+      name: "LocationReservationDeleted"
+      schemaUri: "https://sv.telesv.com/schemas/LocationReservationDeleted_v1.001.json"
+    BedLocationCleanlinessStatusChanged:
+      name: "BedLocationCleanlinessStatusChanged"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationCleanlinessStatusChanged_v1.001.json"
+    BedLocationOccupancyStatusChanged:
+      name: "BedLocationOccupancyStatusChanged"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationOccupancyStatusChanged_v1.001.json"
+    BedLocationAvailabilityStatusChanged:
+      name: "BedLocationAvailabilityStatusChanged"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationAvailabilityStatusChanged_v1.001.json"
+  commands:
+    CreateLocationReservation:
+      name: "CreateLocationReservation"
+      schemaUri: "https://sv.telesv.com/schemas/CreateLocationReservation_v1.002.json"
+      domainEvent:
+        name: "LocationReservationCreated"
+        schemaUri: "https://sv.telesv.com/schemas/LocationReservationCreated_v1.003.json"
+    UpdateLocationReservation:
+      name: "UpdateLocationReservation"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateLocationReservation_v1.002.json"
+      domainEvent:
+        name: "LocationReservationUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/LocationReservationUpdated_v1.003.json"
+    DeleteLocationReservation:
+      name: "DeleteLocationReservation"
+      schemaUri: "https://sv.telesv.com/schemas/DeleteLocationReservation_v1.001.json"
+      domainEvent:
+        name: "LocationReservationDeleted"
+        schemaUri: "https://sv.telesv.com/schemas/LocationReservationDeleted_v1.001.json"
+    CreateOrUpdateLocationReservation:
+      name: "CreateOrUpdateLocationReservation"
+      schemaUri: "https://sv.telesv.com/schemas/CreateOrUpdateLocationReservation_v1.001.json"
+      domainEvent:
+        name: "LocationReservationCreated"
+        schemaUri: "https://sv.telesv.com/schemas/LocationReservationCreated_v1.003.json"
+      events:
+        LocationReservationUpdated:
+          name: "LocationReservationUpdated"
+          schemaUri: "https://sv.telesv.com/schemas/LocationReservationUpdated_v1.003.json"

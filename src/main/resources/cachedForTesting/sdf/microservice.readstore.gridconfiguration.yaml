@@ -1,0 +1,35 @@
+---
+name: "GridConfiguration"
+type: "readstore"
+version: "0.0.1"
+consumes:
+
+  events:
+    GridConfigurationCreated:
+      name: "GridConfigurationCreated"
+      schemaUri: "https://sv.telesv.com/schemas/GridConfigurationCreated_v2.002.json"
+    GridConfigurationUpdated:
+      name: "GridConfigurationUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/GridConfigurationUpdated_v2.002.json"
+
+    GridDefaultViewConfigurationCreated:
+      name: "GridDefaultViewConfigurationCreated"
+      schemaUri: "https://sv.telesv.com/schemas/GridDefaultViewConfigurationCreated_v1.001.json"
+    GridDefaultViewConfigurationUpdated:
+      name: "GridDefaultViewConfigurationUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/GridDefaultViewConfigurationUpdated_v1.001.json"
+    GridViewConfigurationCreated:
+      name: "GridViewConfigurationCreated"
+      schemaUri: "https://sv.telesv.com/schemas/GridViewConfigurationCreated_v1.001.json"
+    GridViewConfigurationUpdated:
+      name: "GridViewConfigurationUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/GridViewConfigurationUpdated_v1.001.json"
+  commands:
+    GetGridConfiguration:
+      name: "GetGridConfiguration"
+      schemaUri: "https://sv.telesv.com/schemas/GetGridConfiguration_v1.001.json"
+      viewModelSchemaUri: "https://sv.telesv.com/schemas/GridConfigurationViewModel_V1.002.json"
+    GetGridViewConfiguration:
+      name: "GetGridViewConfiguration"
+      schemaUri: "https://sv.telesv.com/schemas/GetGridViewConfiguration_v1.001.json"
+      viewModelSchemaUri: "https://sv.telesv.com/schemas/GridViewConfigurationViewModel_v2.001.json"

@@ -1,0 +1,109 @@
+---
+name: "HL7Orchestrator"
+type: "saga"
+version: "1.0.0"
+consumes:
+  events:
+    HL7S12MessageCreated:
+      name: "HL7S12MessageCreated"
+      schemaUri: "https://sv.telesv.com/schemas/HL7S12MessageCreated_v2.001.json"
+      commands:
+        CreatePatient:
+          name: "CreatePatient"
+          schemaUri: "https://sv.telesv.com/schemas/CreatePatient_v1.002.json"
+        UpdatePatient:
+          name: "UpdatePatient"
+          schemaUri: "https://sv.telesv.com/schemas/UpdatePatient_v1.002.json"
+        CreateProcedureAppointment:
+          name: "CreateProcedureAppointment"
+          schemaUri: "https://sv.telesv.com/schemas/CreateProcedureAppointment_v1.002.json"
+        UpdateProcedureAppointment:
+          name: "UpdateProcedureAppointment"
+          schemaUri: "https://sv.telesv.com/schemas/UpdateProcedureAppointment_v1.002.json"
+        CreatePatientProcedure:
+          name: "CreatePatientProcedure"
+          schemaUri: "https://sv.telesv.com/schemas/CreatePatientProcedure_v2.002.json"
+        UpdatePatientProcedure:
+          name: "UpdatePatientProcedure"
+          schemaUri: "https://sv.telesv.com/schemas/UpdatePatientProcedure_v2.002.json"
+        DeletePatientProcedure:
+          name: "DeletePatientProcedure"
+          schemaUri: "https://sv.telesv.com/schemas/DeletePatientProcedure_v1.001.json"
+        CreateStaff:
+          name: "CreateStaff"
+          schemaUri: "https://sv.telesv.com/schemas/CreateStaff_v1.003.json"
+        UpdateStaff:
+          name: "UpdateStaff"
+          schemaUri: "https://sv.telesv.com/schemas/UpdateStaff_v1.003.json"
+    HL7S13MessageCreated:
+      name: "HL7S13MessageCreated"
+      schemaUri: "https://sv.telesv.com/schemas/HL7S13MessageCreated_v1.001.json"
+      commands:
+        UpdateProcedureAppointment:
+          name: "UpdateProcedureAppointment"
+          schemaUri: "https://sv.telesv.com/schemas/UpdateProcedureAppointment_v1.002.json"
+    HL7S14MessageCreated:
+      name: "HL7S14MessageCreated"
+      schemaUri: "https://sv.telesv.com/schemas/HL7S14MessageCreated_v2.001.json"
+      commands:
+        UpdateProcedureAppointment:
+          name: "UpdateProcedureAppointment"
+          schemaUri: "https://sv.telesv.com/schemas/UpdateProcedureAppointment_v1.002.json"
+    HL7S15MessageCreated:
+      name: "HL7S15MessageCreated"
+      schemaUri: "https://sv.telesv.com/schemas/HL7S15MessageCreated_v1.001.json"
+      commands:
+        CancelProcedureAppointment:
+          name: "CancelProcedureAppointment"
+          schemaUri: "https://sv.telesv.com/schemas/CancelProcedureAppointment_v1.002.json"
+    PatientCreatedEvent:
+      name: "PatientCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientCreatedEvent_v1.002.json"
+    PatientUpdatedEvent:
+      name: "PatientUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientUpdatedEvent_v1.002.json"
+    BedLocationCreatedEvent:
+      name: "BedLocationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationCreatedEvent_v1.001.json"
+    FacilityCreatedEvent:
+      name: "FacilityCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCreatedEvent_v1.003.json"
+    UnitCreatedEvent:
+      name: "UnitCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UnitCreatedEvent_v1.004.json"
+    DepartmentCreatedEvent:
+      name: "DepartmentCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/DepartmentCreatedEvent_v1.002.json"
+    LocationAssociationCreatedEvent:
+      name: "LocationAssociationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationCreatedEvent_v1.002.json"
+    LocationAssociationDeletedEvent:
+      name: "LocationAssociationDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationDeletedEvent_v1.002.json"
+    ProcedureAppointmentCreated:
+      name: "AppointmentCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentCreated_v1.003.json"
+    ProcedureAppointmentUpdated:
+      name: "AppointmentUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentUpdated_v1.003.json"
+    PatientProcedureCreated:
+      name: "PatientProcedureCreated"
+      schemaUri: "https://sv.telesv.com/schemas/PatientProcedureCreated_v2.002.json"
+    PatientProcedureUpdated:
+      name: "PatientProcedureUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/PatientProcedureUpdated_v2.002.json"
+    PatientProcedureDeleted:
+      name: "PatientProcedureDeleted"
+      schemaUri: "https://sv.telesv.com/schemas/PatientProcedureDeleted_v1.001.json"
+    ResponsibilityCreated:
+      name: "ResponsibilityCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ResponsibilityCreated_v1.002.json"
+    ResponsibilityUpdated:
+      name: "ResponsibilityUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/ResponsibilityUpdated_v1.002.json"
+    StaffCreatedEvent:
+      name: "StaffCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/StaffCreatedEvent_v2.002.json"
+    StaffUpdatedEvent:
+      name: "StaffUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/StaffUpdatedEvent_v1.002.json"

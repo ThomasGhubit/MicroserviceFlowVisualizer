@@ -1,0 +1,102 @@
+---
+name: "StaffAssignment"
+type: "transactional"
+version: "1.0.0"
+consumes:
+  events:
+    StaffAssignmentForBedLocationCreated:
+      name: "StaffAssignmentForBedLocationCreated"
+      schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForBedLocationCreated_v1.001.json"
+    StaffAssignmentForUnitCreated:
+      name: "StaffAssignmentForUnitCreated"
+      schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForUnitCreated_v1.001.json"
+    StaffAssignmentForBedLocationUpdated:
+      name: "StaffAssignmentForBedLocationUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForBedLocationUpdated_v1.001.json"
+    StaffAssignmentForUnitUpdated:
+      name: "StaffAssignmentForUnitUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForUnitUpdated_v1.001.json"
+    BedLocationCreatedEvent:
+      name: "BedLocationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationCreatedEvent_v2.001.json"
+    BedLocationUpdatedEvent:
+      name: "BedLocationUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationUpdatedEvent_v2.001.json"
+    BedLocationDeletedEvent:
+      name: "BedLocationDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationDeletedEvent_v1.001.json"
+    ResponsibilityCreated:
+      name: "ResponsibilityCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ResponsibilityCreated_v1.003.json"
+    ResponsibilityUpdated:
+      name: "ResponsibilityUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/ResponsibilityUpdated_v1.003.json"
+    ResponsibilityDeleted:
+      name: "ResponsibilityDeleted"
+      schemaUri: "https://sv.telesv.com/schemas/ResponsibilityDeleted_v1.003.json"
+    StaffCreatedEvent:
+      name: "StaffCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/StaffCreatedEvent_v2.002.json"
+    StaffUpdatedEvent:
+      name: "StaffUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/StaffUpdatedEvent_v1.002.json"
+    UnitCreatedEvent:
+      name: "UnitCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UnitCreatedEvent_v1.004.json"
+    UnitUpdatedEvent:
+      name: "UnitUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UnitUpdatedEvent_v1.004.json"
+  commands:
+    CreateStaffAssignmentForBedLocation:
+      name: "CreateStaffAssignmentForBedLocation"
+      schemaUri: "https://sv.telesv.com/schemas/CreateStaffAssignmentForBedLocation_v1.001.json"
+      domainEvent:
+        name: "StaffAssignmentForBedLocationCreated"
+        schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForBedLocationCreated_v1.001.json"
+      events:
+        CreateStaffAssignmentForBedLocationFailed:
+          name: "CreateStaffAssignmentForBedLocationFailed"
+          schemaUri: "https://sv.telesv.com/schemas/CreateStaffAssignmentForBedLocationFailed_v1.001.json"
+    CreateStaffAssignmentForUnit:
+      name: "CreateStaffAssignmentForUnit"
+      schemaUri: "https://sv.telesv.com/schemas/CreateStaffAssignmentForUnit_v1.001.json"
+      domainEvent:
+        name: "StaffAssignmentForUnitCreated"
+        schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForUnitCreated_v1.001.json"
+      events:
+        CreateStaffAssignmentForUnitFailed:
+          name: "CreateStaffAssignmentForUnitFailed"
+          schemaUri: "https://sv.telesv.com/schemas/CreateStaffAssignmentForUnitFailed_v1.002.json"
+    ChangeStaffAssignmentForBedLocation:
+      name: "ChangeStaffAssignmentForBedLocation"
+      schemaUri: "https://sv.telesv.com/schemas/ChangeStaffAssignmentForBedLocation_v1.001.json"
+      domainEvent:
+        name: "StaffAssignmentForBedLocationUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForBedLocationUpdated_v1.001.json"
+      events:
+        StaffAssignmentForBedLocationCreated:
+          name: "StaffAssignmentForBedLocationCreated"
+          schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForBedLocationCreated_v1.001.json"
+        ChangeStaffAssignmentForBedLocationFailed:
+          name: "ChangeStaffAssignmentForBedLocationFailed"
+          schemaUri: "https://sv.telesv.com/schemas/ChangeStaffAssignmentForBedLocationFailed_v1.001.json"
+    UpdateStaffAssignmentForBedLocation:
+      name: "UpdateStaffAssignmentForBedLocation"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateStaffAssignmentForBedLocation_v1.001.json"
+      domainEvent:
+        name: "StaffAssignmentForBedLocationUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForBedLocationUpdated_v1.001.json"
+      events:
+        UpdateStaffAssignmentForBedLocationFailed:
+          name: "UpdateStaffAssignmentForBedLocationFailed"
+          schemaUri: "https://sv.telesv.com/schemas/UpdateStaffAssignmentForBedLocationFailed_v1.001.json"
+    UpdateStaffAssignmentForUnit:
+      name: "UpdateStaffAssignmentForUnit"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateStaffAssignmentForUnit_v1.001.json"
+      domainEvent:
+        name: "StaffAssignmentForUnitUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForUnitUpdated_v1.001.json"
+      events:
+        UpdateStaffAssignmentForUnitFailed:
+          name: "UpdateStaffAssignmentForUnitFailed"
+          schemaUri: "https://sv.telesv.com/schemas/UpdateStaffAssignmentForUnitFailed_v1.001.json"

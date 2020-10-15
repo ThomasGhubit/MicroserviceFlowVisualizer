@@ -1,0 +1,205 @@
+---
+name: "Location"
+type: "transactional"
+version: "1.0.0"
+consumes:
+  events:
+    UnitCreatedEvent:
+      name: "UnitCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UnitCreatedEvent_v1.004.json"
+    UnitUpdatedEvent:
+      name: "UnitUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UnitUpdatedEvent_v1.004.json"
+    RoomCreatedEvent:
+      name: "RoomCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/RoomCreatedEvent_v1.003.json"
+    RoomUpdatedEvent:
+      name: "RoomUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/RoomUpdatedEvent_v1.003.json"
+    FacilityCreatedEvent:
+      name: "FacilityCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCreatedEvent_v1.003.json"
+    FacilityUpdatedEvent:
+      name: "FacilityUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityUpdatedEvent_v1.003.json"
+    DepartmentCreatedEvent:
+      name: "DepartmentCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/DepartmentCreatedEvent_v1.002.json"
+    DepartmentUpdatedEvent:
+      name: "DepartmentUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/DepartmentUpdatedEvent_v1.002.json"
+    BedLocationCreatedEvent:
+      name: "BedLocationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationCreatedEvent_v2.001.json"
+    BedLocationUpdatedEvent:
+      name: "BedLocationUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationUpdatedEvent_v2.001.json"
+    LocationAssociationCreatedEvent:
+      name: "LocationAssociationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationCreatedEvent_v2.002.json"
+    LocationAssociationUpdatedEvent:
+      name: "LocationAssociationUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationUpdatedEvent_v2.002.json"
+    LocationAssociationDeletedEvent:
+      name: "LocationAssociationDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationDeletedEvent_v2.002.json"
+    BedLocationCleanlinessStatusChanged:
+      name: "BedLocationCleanlinessStatusChanged"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationCleanlinessStatusChanged_v1.001.json"
+    BedLocationAvailabilityStatusChanged:
+      name: "BedLocationAvailabilityStatusChanged"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationAvailabilityStatusChanged_v1.001.json"
+    BedLocationOccupancyStatusChanged:
+      name: "BedLocationOccupancyStatusChanged"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationOccupancyStatusChanged_v1.001.json"
+    ZoneTypeCreated:
+      name: "ZoneTypeCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ZoneTypeCreated_v1.001.json"
+    ZoneTypeUpdated:
+      name: "ZoneTypeUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/ZoneTypeUpdated_v1.001.json"
+  commands:
+    CreateUnit:
+      name: "CreateUnit"
+      schemaUri: "https://sv.telesv.com/schemas/CreateUnit_v1.001.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "UnitCreatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/UnitCreatedEvent_v1.004.json"
+    UpdateUnit:
+      name: "UpdateUnit"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateUnit_v1.001.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "UnitUpdatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/UnitUpdatedEvent_v1.004.json"
+    CreateRoom:
+      name: "CreateRoom"
+      schemaUri: "https://sv.telesv.com/schemas/CreateRoom_v1.001.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "RoomCreatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/RoomCreatedEvent_v1.003.json"
+    UpdateRoom:
+      name: "UpdateRoom"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateRoom_v1.001.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "RoomUpdatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/RoomUpdatedEvent_v1.003.json"
+    CreateFacility:
+      name: "CreateFacility"
+      schemaUri: "https://sv.telesv.com/schemas/CreateFacility_v1.001.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "FacilityCreatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/FacilityCreatedEvent_v1.003.json"
+    UpdateFacility:
+      name: "UpdateFacility"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateFacility_v1.001.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "FacilityUpdatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/FacilityUpdatedEvent_v1.003.json"
+    CreateDepartment:
+      name: "CreateDepartment"
+      schemaUri: "https://sv.telesv.com/schemas/CreateDepartment_v1.001.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "DepartmentCreatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/DepartmentCreatedEvent_v1.002.json"
+    UpdateDepartment:
+      name: "UpdateDepartment"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateDepartment_v1.001.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "DepartmentUpdatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/DepartmentUpdatedEvent_v1.002.json"
+    CreateBedLocation:
+      name: "CreateBedLocation"
+      schemaUri: "https://sv.telesv.com/schemas/CreateBedLocation_v1.002.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "BedLocationCreatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/BedLocationCreatedEvent_v2.001.json"
+    UpdateBedLocation:
+      name: "UpdateBedLocation"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateBedLocation_v2.001.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "BedLocationUpdatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/BedLocationUpdatedEvent_v2.001.json"
+    ChangeBedLocationAvailabilityStatus:
+      name: "ChangeBedLocationAvailabilityStatus"
+      schemaUri: "https://sv.telesv.com/schemas/ChangeBedLocationAvailabilityStatus_v2.001.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "BedLocationAvailabilityStatusChanged"
+        schemaUri: "https://sv.telesv.com/schemas/BedLocationAvailabilityStatusChanged_v1.001.json"
+    ChangeBedLocationCleanlinessStatus:
+      name: "ChangeBedLocationCleanlinessStatus"
+      schemaUri: "https://sv.telesv.com/schemas/ChangeBedLocationCleanlinessStatus_v2.001.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "BedLocationCleanlinessStatusChanged"
+        schemaUri: "https://sv.telesv.com/schemas/BedLocationCleanlinessStatusChanged_v1.001.json"
+    ChangeBedLocationOccupancyStatus:
+      name: "ChangeBedLocationOccupancyStatus"
+      schemaUri: "https://sv.telesv.com/schemas/ChangeBedLocationOccupancyStatus_v2.001.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "BedLocationOccupancyStatusChanged"
+        schemaUri: "https://sv.telesv.com/schemas/BedLocationOccupancyStatusChanged_v1.001.json"
+    CreateLocationAssociation:
+      name: "CreateLocationAssociation"
+      schemaUri: "https://sv.telesv.com/schemas/CreateLocationAssociation_v2.002.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "LocationAssociationCreatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/LocationAssociationCreatedEvent_v2.002.json"
+    UpdateLocationAssociation:
+      name: "UpdateLocationAssociation"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateLocationAssociation_v2.002.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "LocationAssociationUpdatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/LocationAssociationUpdatedEvent_v2.002.json"
+    DeleteLocationAssociation:
+      name: "DeleteLocationAssociation"
+      schemaUri: "https://sv.telesv.com/schemas/DeleteLocationAssociation_v2.002.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "LocationAssociationDeletedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/LocationAssociationDeletedEvent_v2.002.json"
+    CreateZoneType:
+      name: "CreateZoneType"
+      schemaUri: "https://sv.telesv.com/schemas/CreateZoneType_v1.001.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "ZoneTypeCreated"
+        schemaUri: "https://sv.telesv.com/schemas/ZoneTypeCreated_v1.001.json"
+    UpdateZoneType:
+      name: "UpdateZoneType"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateZoneType_v1.001.json"
+      roles:
+        - "ADMIN"
+      domainEvent:
+        name: "ZoneTypeUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/ZoneTypeUpdated_v1.001.json"

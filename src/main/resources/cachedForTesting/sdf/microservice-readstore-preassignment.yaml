@@ -1,0 +1,57 @@
+---
+name: "PreAssignment"
+type: "readstore"
+version: "1.0.0"
+consumes:
+  events:
+    ProcedureAppointmentCreated:
+      name: "ProcedureAppointmentCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentCreated_v1.002.json"
+    ProcedureAppointmentUpdated:
+      name: "ProcedureAppointmentUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentUpdated_v1.002.json"
+    PatientCreatedEvent:
+      name: "PatientCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientCreatedEvent_v2.001.json"
+    PatientUpdatedEvent:
+      name: "PatientUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientUpdatedEvent_v2.001.json"
+    BedLocationCreatedEvent:
+      name: "BedLocationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationCreatedEvent_v2.001.json"
+    BedLocationUpdatedEvent:
+      name: "BedLocationUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationUpdatedEvent_v2.001.json"
+    LocationReservationCreated:
+      name: "LocationReservationCreated"
+      schemaUri: "https://sv.telesv.com/schemas/LocationReservationCreated_v1.003.json"
+    LocationReservationUpdated:
+      name: "LocationReservationUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/LocationReservationUpdated_v1.003.json"
+    LocationReservationDeleted:
+      name: "LocationReservationDeleted"
+      schemaUri: "https://sv.telesv.com/schemas/LocationReservationDeleted_v1.003.json"
+    UnitCreated:
+      name: "UnitCreated"
+      schemaUri: "https://sv.telesv.com/schemas/UnitCreatedEvent_v1.004.json"
+    UnitUpdated:
+      name: "UnitUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/UnitUpdatedEvent_v1.004.json"
+    LocationAssociationCreatedEvent:
+      name: "LocationAssociationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationCreatedEvent_v2.001.json"
+    LocationAssociationUpdatedEvent:
+      name: "LocationAssociationUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationUpdatedEvent_v2.001.json"
+    PatientLocationChangedEvent:
+      name: "PatientLocationChangedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientLocationChanged_v1.001.json"
+  commands:
+    GetPreAssignmentPatientList:
+      name: "GetPreAssignmentPatientList"
+      schemaUri: "https://sv.telesv.com/schemas/GetPreAssignmentPatientList_v1.001.json"
+      viewModelSchemaUri: "https://sv.telesv.com/schemas/PreAssignmentPatientListViewModel_v1.001.json"
+    GetQueuedPatientViewModel:
+      name: "GetQueuedPatientViewModel"
+      schemaUri: "https://sv.telesv.com/schemas/GetQueuedPatientViewModel_v1.001.json"
+      viewModelSchemaUri: "https://sv.telesv.com/schemas/QueuedPatientViewModel_v1.002.json"

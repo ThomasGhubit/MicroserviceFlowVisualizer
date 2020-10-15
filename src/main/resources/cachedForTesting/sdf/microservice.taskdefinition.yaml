@@ -1,0 +1,58 @@
+---
+name: "TaskDefinition"
+type: "domain"
+version: "1.0.0"
+consumes:
+    events:
+        TaskDefinitionAttributeCategoryCreated:
+            name: "TaskDefinitionAttributeCategoryCreated"
+            schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionAttributeCategoryCreated_v1.001.json"
+        TaskDefinitionCreated:
+            name: "TaskDefinitionCreated"
+            schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionCreated_v1.001.json"
+        SkillCreated:
+            name: "SkillCreated"
+            schemaUri: "https://sv.telesv.com/schemas/SkillCreated_v1.001.json"
+        TaskDefinitionUpdated:
+            name: "TaskDefinitionUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionUpdated_v1.001.json"
+        TaskDefinitionAttributeCategoryUpdated:
+            name: "TaskDefinitionAttributeCategoryUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionAttributeCategoryUpdated_v1.001.json"
+    commands:
+        CreateTaskDefinitionAttributeCategory:
+            name: "CreateTaskDefinitionAttributeCategory"
+            schemaUri: "https://sv.telesv.com/schemas/CreateTaskDefinitionAttributeCategory_v1.001.json"
+            roles:
+                - "Administrator"
+            events:
+                TaskDefinitionAttributeCategoryCreated:
+                    name: "TaskDefinitionAttributeCategoryCreated"
+                    schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionAttributeCategoryCreated_v1.001.json"
+        CreateTaskDefinition:
+            name: "CreateTaskDefinition"
+            schemaUri: "https://sv.telesv.com/schemas/CreateTaskDefinition_v1.001.json"
+            roles:
+                - "Administrator"
+            events:
+                TaskDefinitionCreated:
+                    name: "TaskDefinitionCreated"
+                    schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionCreated_v1.001.json"
+        UpdateTaskDefinition:
+            name: "UpdateTaskDefinition"
+            schemaUri: "https://sv.telesv.com/schemas/UpdateTaskDefinition_v1.001.json"
+            roles:
+                - "Administrator"
+            events:
+                TaskDefinitionUpdated:
+                    name: "TaskDefinitionUpdated"
+                    schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionUpdated_v1.001.json"
+        UpdateTaskDefinitionAttributeCategory:
+            name: "UpdateTaskDefinitionAttributeCategory"
+            schemaUri: "https://sv.telesv.com/schemas/UpdateTaskDefinitionAttributeCategory_v1.001.json"
+            roles:
+                - "Administrator"
+            events:
+                TaskDefinitionUpdated:
+                    name: "TaskDefinitionAttributeCategoryUpdated"
+                    schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionAttributeCategoryUpdated_v1.001.json"

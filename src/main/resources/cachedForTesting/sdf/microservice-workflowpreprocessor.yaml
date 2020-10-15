@@ -1,0 +1,60 @@
+---
+name: "WorkflowPreprocessor"
+type: "transactional"
+version: "1.0.0"
+consumes:
+    events:
+        RawWorkflowPackageCreated:
+            name: "RawWorkflowPackageCreated"
+            schemaUri: "https://sv.telesv.com/schemas/RawWorkflowPackageCreated_v1.001.json"
+        RawWorkflowPackageDeleted:
+            name: "RawWorkflowPackageDeleted"
+            schemaUri: "https://sv.telesv.com/schemas/RawWorkflowPackageDeleted_v1.001.json"
+        RawWorkflowPackageUpdated:
+            name: "RawWorkflowPackageUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/RawWorkflowPackageUpdated_v1.001.json"
+        WorkflowPackageCreated:
+            name: "WorkflowPackageCreated"
+            schemaUri: "https://sv.telesv.com/schemas/WorkflowPackageCreated_v1.001.json"
+        WorkflowPackageDeleted:
+            name: "WorkflowPackageDeleted"
+            schemaUri: "https://sv.telesv.com/schemas/WorkflowPackageDeleted_v1.001.json"
+        WorkflowPackageUpdated:
+            name: "WorkflowPackageUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/WorkflowPackageUpdated_v1.001.json"
+        LocationAssociationCreatedEvent:
+            name: "LocationAssociationCreatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/LocationAssociationCreatedEvent_v2.002.json"
+        LocationAssociationDeletedEvent:
+            name: "LocationAssociationDeletedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/LocationAssociationDeletedEvent_v2.002.json"
+        LocationAssociationUpdatedEvent:
+            name: "LocationAssociationUpdatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/LocationAssociationUpdatedEvent_v2.002.json"
+
+    commands:
+        CreateRawWorkflowPackage:
+            name: "CreateRawWorkflowPackage"
+            schemaUri: "https://sv.telesv.com/schemas/CreateRawWorkflowPackage_v1.001.json"
+            roles:
+                - "TELETRACKING_BEST_PRACTICE_DEFINITION_ADMINISTRATOR"
+        DeleteRawWorkflowPackage:
+            name: "DeleteRawWorkflowPackage"
+            schemaUri: "https://sv.telesv.com/schemas/DeleteRawWorkflowPackage_v1.001.json"
+            roles:
+                - "TELETRACKING_BEST_PRACTICE_DEFINITION_ADMINISTRATOR"
+        UpdateRawWorkflowPackage:
+            name: "UpdateRawWorkflowPackage"
+            schemaUri: "https://sv.telesv.com/schemas/UpdateRawWorkflowPackage_v1.001.json"
+            roles:
+                - "TELETRACKING_BEST_PRACTICE_DEFINITION_ADMINISTRATOR"
+        CompileWorkflowPackage:
+            name: "CompileWorkflowPackage"
+            schemaUri: "https://sv.telesv.com/schemas/CompileWorkflowPackage_v1.001.json"
+            roles:
+                - "TELETRACKING_BEST_PRACTICE_DEFINITION_ADMINISTRATOR"
+        CompileWorkflowPackagesForTenant:
+            name: "CompileWorkflowPackagesForTenant"
+            schemaUri: "https://sv.telesv.com/schemas/CompileWorkflowPackagesForTenant_v1.001.json"
+            roles:
+                - "TELETRACKING_BEST_PRACTICE_DEFINITION_ADMINISTRATOR"

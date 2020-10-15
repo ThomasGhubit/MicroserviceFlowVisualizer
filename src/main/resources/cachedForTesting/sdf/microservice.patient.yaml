@@ -1,0 +1,29 @@
+---
+name: "Patient"
+type: "transactional"
+version: "1.0.0"
+consumes:
+  events:
+    PatientCreatedEvent:
+      name: "PatientCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientCreatedEvent_v1.002.json"
+    PatientUpdatedEvent:
+      name: "PatientUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientUpdatedEvent_v1.002.json"
+  commands:
+    CreatePatient:
+      name: "CreatePatient"
+      schemaUri: "https://sv.telesv.com/schemas/CreatePatient_v1.002.json"
+      roles:
+        - "ORCHESTRATOR"
+      domainEvent:
+        name: "PatientCreatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/PatientCreatedEvent_v1.002.json"
+    UpdatePatient:
+      name: "UpdatePatient"
+      schemaUri: "https://sv.telesv.com/schemas/UpdatePatient_v1.002.json"
+      roles:
+        - "ORCHESTRATOR"
+      domainEvent:
+        name: "PatientUpdatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/PatientUpdatedEvent_v1.002.json"

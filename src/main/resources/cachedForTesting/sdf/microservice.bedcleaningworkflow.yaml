@@ -1,0 +1,32 @@
+---
+name: "BedCleaning"
+type: "transactional"
+version: "1.0.0"
+consumes:
+  events:
+    BedCleaningMilestoneCreated:
+      name: "BedCleaningMilestoneCreated"
+      schemaUri: "https://sv.telesv.com/schemas/BedCleaningMilestoneCreated_v1.001.json"
+    BedCleaningMilestoneUpdated:
+      name: "BedCleaningMilestoneUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/BedCleaningMilestoneUpdated_v1.001.json"
+    BedCleaningMilestoneSetCompleted:
+      name: "BedCleaningMilestoneSetCompleted"
+      schemaUri: "https://sv.telesv.com/schemas/BedCleaningMilestoneSetCompleted_v1.001.json"
+    BedLocationCreatedEvent:
+      name: "BedLocationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationCreatedEvent_v2.001.json"
+    BedLocationDeletedEvent:
+      name: "BedLocationDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationDeletedEvent_v1.001.json"
+  commands:
+    CreateBedCleaningProcess:
+      name: "CreateBedCleaningProcess"
+      schemaUri: "https://sv.telesv.com/schemas/CreateBedCleaningProcess_v2.002.json"
+      roles:
+        - "Registration Administrator"
+    CompleteBedCleaningMilestone:
+      name: "CompleteBedCleaningMilestone"
+      schemaUri: "https://sv.telesv.com/schemas/CompleteBedCleaningMilestone_v1.001.json"
+      roles:
+        - "Registration Administrator"

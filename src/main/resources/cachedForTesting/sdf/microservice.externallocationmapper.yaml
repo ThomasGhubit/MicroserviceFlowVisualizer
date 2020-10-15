@@ -1,0 +1,24 @@
+---
+name: "ExternalLocationMapper"
+type: "utility"
+version: "1.0.0"
+consumes:
+  events:
+    BedLocationCreatedEvent:
+      name: "BedLocationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationCreatedEvent_v1.001.json"
+    FacilityCreatedEvent:
+      name: "FacilityCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCreatedEvent_v1.003.json"
+    UnitCreatedEvent:
+      name: "UnitCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UnitCreatedEvent_v1.004.json"
+    DepartmentCreatedEvent:
+      name: "DepartmentCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/DepartmentCreatedEvent_v1.002.json"
+    LocationAssociationCreatedEvent:
+      name: "LocationAssociationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationCreatedEvent_v1.002.json"
+    LocationAssociationDeletedEvent:
+      name: "LocationAssociationDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationDeletedEvent_v1.002.json"

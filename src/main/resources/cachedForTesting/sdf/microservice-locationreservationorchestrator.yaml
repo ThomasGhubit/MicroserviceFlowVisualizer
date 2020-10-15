@@ -1,0 +1,20 @@
+---
+name: "LocationReservationOrchestrator"
+type: "orchestrator"
+version: "1.0.0"
+consumes:
+  events:
+    ProcedureAppointmentCreated:
+      name: "ProcedureAppointmentCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentCreated_v1.002.json"
+      commands:
+        ProcessProcedureAppointmentCreated:
+          name: "ProcessProcedureAppointmentCreated"
+          schemaUri: "https://sv.telesv.com/schemas/ProcessProcedureAppointmentCreated_v1.001.json"
+    ProcedureAppointmentUpdated:
+      name: "ProcedureAppointmentUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentUpdated_v1.002.json"
+      commands:
+        ProcessProcedureAppointmentUpdated:
+          name: "ProcessProcedureAppointmentUpdated"
+          schemaUri: "https://sv.telesv.com/schemas/ProcessProcedureAppointmentUpdated_v1.001.json"

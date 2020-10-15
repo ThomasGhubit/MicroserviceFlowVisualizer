@@ -1,0 +1,27 @@
+---
+name: "LocResOrchServTest"
+type: "orchestrator"
+version: "0.0.1"
+consumes:
+  events:
+    ProcedureAppointmentCreated:
+      name: "ProcedureAppointmentCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentCreated_v1.002.json"
+    ProcedureAppointmentUpdated:
+      name: "ProcedureAppointmentUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentUpdated_v1.002.json"
+  commands:
+    ProcessProcedureAppointmentCreated:
+      name: "ProcessProcedureAppointmentCreated"
+      schemaUri: "https://sv.telesv.com/schemas/CreateProcedureAppointment_v1.001.json"
+      events:
+        ProcedureAppointmentCreated:
+          name: "ProcedureAppointmentCreated"
+          schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentCreated_v1.002.json"
+    ProcessProcedureAppointmentUpdated:
+      name: "ProcessProcedureAppointmentUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateProcedureAppointment_v1.001.json"
+      events:
+        ProcedureAppointmentUpdated:
+          name: "ProcedureAppointmentUpdated"
+          schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentUpdated_v1.002.json"
