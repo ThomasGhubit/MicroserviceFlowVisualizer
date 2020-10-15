@@ -9,14 +9,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping
 public class Controller {
 
-    private Engine engine;
-    private Parser parser;
+    private final Engine engine;
+    private final Parser parser;
+
+    Controller( Engine engine, Parser parser ) {
+        this.engine = engine;
+        this.parser = parser;
+    }
     
     @GetMapping("/ping")
     public HelloMessage home() {
@@ -24,9 +28,9 @@ public class Controller {
     }
 
     @GetMapping("/visualize")
-    public Set<GraphedModel> visualizeFlow() {
+    public GraphedModel visualizeFlow() {
         Set<SdfDefinition> definitions = parser.retrieveDefinitions();
 
-        return definitions.stream().map(definition -> engine.buildModel(definition)).collect(Collectors.toSet());
+        return engine.buildModel( definitions );
     }
 }
