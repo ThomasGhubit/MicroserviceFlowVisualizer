@@ -1,0 +1,144 @@
+---
+name: "BayAssignment"
+type: "readstore"
+version: "1.0.0"
+consumes:
+ events:
+  ProcedureAppointmentCreated:
+   name: "ProcedureAppointmentCreated"
+   schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentCreated_v1.001.json"
+  ProcedureAppointmentUpdated:
+   name: "ProcedureAppointmentUpdated"
+   schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentUpdated_v1.001.json"
+  BedLocationAvailabilityStatusChanged:
+   name: "BedLocationAvailabilityStatusChanged"
+   schemaUri: "https://sv.telesv.com/schemas/BedLocationAvailabilityStatusChanged_v1.001.json"
+  PatientCreated:
+   name: "PatientCreated"
+   schemaUri: "https://sv.telesv.com/schemas/PatientCreatedEvent_v1.001.json"
+  PatientUpdated:
+   name: "PatientUpdated"
+   schemaUri: "https://sv.telesv.com/schemas/PatientUpdatedEvent_v1.001.json"
+  BedLocationCreated:
+   name: "BedLocationCreated"
+   schemaUri: "https://sv.telesv.com/schemas/BedLocationCreatedEvent_v2.001.json"
+  BedLocationUpdated:
+   name: "BedLocationUpdated"
+   schemaUri: "https://sv.telesv.com/schemas/BedLocationUpdatedEvent_v2.001.json"
+  BedLocationDeleted:
+   name: "BedLocationDeleted"
+   schemaUri: "https://sv.telesv.com/schemas/BedLocationDeletedEvent_v1.001.json"
+  BedLocationCleanlinessStatusChanged:
+   name: "BedLocationCleanlinessStatusChanged"
+   schemaUri: "https://sv.telesv.com/schemas/BedLocationCleanlinessStatusChanged_v1.001.json"
+  UnitCreated:
+   name: "UnitCreated"
+   schemaUri: "https://sv.telesv.com/schemas/UnitCreatedEvent_v1.004.json"
+  UnitUpdated:
+   name: "UnitUpdated"
+   schemaUri: "https://sv.telesv.com/schemas/UnitUpdatedEvent_v1.004.json"
+  UnitDeleted:
+   name: "UnitDeleted"
+   schemaUri: "https://sv.telesv.com/schemas/UnitDeletedEvent_v1.001.json"
+  LocationAssociationCreatedEvent:
+   name: "LocationAssociationCreatedEvent"
+   schemaUri: "https://sv.telesv.com/schemas/LocationAssociationCreatedEvent_v1.002.json"
+  LocationAssociationDeletedEvent:
+   name: "LocationAssociationDeletedEvent"
+   schemaUri: "https://sv.telesv.com/schemas/LocationAssociationDeletedEvent_v1.002.json"
+  LocationAssociationUpdatedEvent:
+   name: "LocationAssociationUpdatedEvent"
+   schemaUri: "https://sv.telesv.com/schemas/LocationAssociationUpdatedEvent_v1.002.json"
+  BedCleaningMilestoneCreated:
+   name: "BedCleaningMilestoneCreated"
+   schemaUri: "https://sv.telesv.com/schemas/BedCleaningMilestoneCreated_v1.001.json"
+  BedCleaningMilestoneSetCompleted:
+   name: "BedCleaningMilestoneSetCompleted"
+   schemaUri: "https://sv.telesv.com/schemas/BedCleaningMilestoneSetCompleted_v1.001.json"
+  BedCleaningMilestoneUpdated:
+   name: "BedCleaningMilestoneUpdated"
+   schemaUri: "https://sv.telesv.com/schemas/BedCleaningMilestoneUpdated_v1.001.json"
+  BedLocationOccupancyStatusChanged:
+   name: "BedLocationOccupancyStatusChanged"
+   schemaUri: "https://sv.telesv.com/schemas/BedLocationOccupancyStatusChanged_v1.001.json"
+  LocationReservationStatusChanged:
+   name: "LocationReservationStatusChanged"
+   schemaUri: "https://sv.telesv.com/schemas/LocationReservationStatusChanged_v1.001.json"
+  LocationReservationCreated:
+   name: "LocationReservationCreated"
+   schemaUri: "https://sv.telesv.com/schemas/LocationReservationCreated_v1.003.json"
+  LocationReservationUpdated:
+   name: "LocationReservationUpdated"
+   schemaUri: "https://sv.telesv.com/schemas/LocationReservationUpdated_v1.003.json"
+  PatientLocationChanged:
+   name: "PatientLocationChanged"
+   schemaUri: "https://sv.telesv.com/schemas/PatientLocationChanged_v1.001.json"
+  PatientProcedureCreated:
+   name: "PatientProcedureCreated"
+   schemaUri: "https://sv.telesv.com/schemas/PatientProcedureCreatedEvent_v1.001.json"
+  PatientProcedureUpdated:
+   name: "PatientProcedureUpdated"
+   schemaUri: "https://sv.telesv.com/schemas/PatientProcedureUpdatedEvent_v1.001.json"
+  PerioperativeMilestoneCreated:
+   name: "PerioperativeMilestoneCreated"
+   schemaUri: "https://sv.telesv.com/schemas/PerioperativeMilestoneCreated_v1.001.json"
+  PerioperativeMilestoneSetCompleted:
+   name: "PerioperativeMilestoneSetCompleted"
+   schemaUri: "https://sv.telesv.com/schemas/PerioperativeMilestoneSetCompleted_v1.001.json"
+  PerioperativeMilestoneUpdated:
+   name: "PerioperativeMilestoneUpdated"
+   schemaUri: "https://sv.telesv.com/schemas/PerioperativeMilestoneUpdated_v1.001.json"
+  RegistrationMilestoneSetCompleted:
+   name: "RegistrationMilestoneSetCompleted"
+   schemaUri: "https://sv.telesv.com/schemas/RegistrationMilestoneSetCompleted_v1.001.json"
+  TaskDefinitionCreated:
+   name: "TaskDefinitionCreated"
+   schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionCreated_v1.001.json"
+  TaskDefinitionAttributeCategoryCreated:
+   name: "TaskDefinitionAttributeCategoryCreated"
+   schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionAttributeCategoryCreated_v1.001.json"
+  DeliveryJobCreated:
+   name: "DeliveryJobCreated"
+   schemaUri: "https://sv.telesv.com/schemas/DeliveryJobCreated_v2.001.json"
+  StaffJobCreated:
+   name: "StaffJobCreated"
+   schemaUri: "https://sv.telesv.com/schemas/StaffJobCreated_v2.001.json"
+  ServiceJobCreated:
+   name: "ServiceJobCreated"
+   schemaUri: "https://sv.telesv.com/schemas/ServiceJobCreated_v2.001.json"
+  PickupJobCreated:
+   name: "PickupJobCreated"
+   schemaUri: "https://sv.telesv.com/schemas/PickupJobCreated_v2.001.json"
+  DeliveryJobStatusChanged:
+   name: "DeliveryJobStatusChanged"
+   schemaUri: "https://sv.telesv.com/schemas/DeliveryJobStatusChanged_v1.002.json"
+  PickupJobStatusChanged:
+   name: "PickupJobStatusChanged"
+   schemaUri: "https://sv.telesv.com/schemas/PickupJobStatusChanged_v1.002.json"
+  ServiceJobStatusChanged:
+   name: "ServiceJobStatusChanged"
+   schemaUri: "https://sv.telesv.com/schemas/ServiceJobStatusChanged_v1.002.json"
+  StaffJobStatusChanged:
+   name: "StaffJobStatusChanged"
+   schemaUri: "https://sv.telesv.com/schemas/StaffJobStatusChanged_v1.001.json"
+  AppointmentCautionsCreated:
+   name: "AppointmentCautionsCreated"
+   schemaUri: "https://sv.telesv.com/schemas/AppointmentCautionsCreated_v1.001.json"
+  AppointmentCautionsUpdated:
+   name: "AppointmentCautionsUpdated"
+   schemaUri: "https://sv.telesv.com/schemas/AppointmentCautionsUpdated_v1.001.json"
+  StaffAssignmentForBedLocationCreated:
+   name: "StaffAssignmentForBedLocationCreated"
+   schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForBedLocationCreated_v1.001.json"
+  StaffCreatedEvent:
+   name: "StaffCreatedEvent"
+   schemaUri: "https://sv.telesv.com/schemas/StaffCreatedEvent_v2.002.json"
+  StaffUpdatedEvent:
+   name: "StaffUpdatedEvent"
+   schemaUri: "https://sv.telesv.com/schemas/StaffUpdatedEvent_v1.002.json"
+  StaffDeletedEvent:
+   name: "StaffDeletedEvent"
+   schemaUri: "https://sv.telesv.com/schemas/StaffDeletedEvent_v1.001.json"
+  StaffAssignmentForBedLocationUpdated:
+   name: "StaffAssignmentForBedLocationUpdated"
+   schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForBedLocationUpdated_v1.001.json"

@@ -1,0 +1,76 @@
+---
+name: "CautionManagement"
+type: "transactional"
+version: "0.0.1"
+consumes:
+  events:
+    AppointmentCautionsUpdated:
+      name: "AppointmentCautionsUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/AppointmentCautionsUpdated_v1.001.json"
+    AppointmentCautionsCreated:
+      name: "AppointmentCautionsCreated"
+      schemaUri: "https://sv.telesv.com/schemas/AppointmentCautionsCreated_v1.001.json"
+    CautionCreated:
+      name: "CautionCreated"
+      schemaUri: "https://sv.telesv.com/schemas/CautionCreated_v1.001.json"
+    CautionUpdated:
+      name: "CautionUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/CautionUpdated_v1.001.json"
+    DepartmentCautionsUpdated:
+      name: "DepartmentCautionsUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/DepartmentCautionsUpdated_v1.001.json"
+    DepartmentCautionsCreated:
+      name: "DepartmentCautionsCreated"
+      schemaUri: "https://sv.telesv.com/schemas/DepartmentCautionsCreated_v1.001.json"
+
+  commands:
+    DeleteAppointmentCaution:
+      name: "DeleteAppointmentCaution"
+      schemaUri: "https://sv.telesv.com/schemas/DeleteAppointmentCaution_v1.001.json"
+      domainEvent:
+        name: "AppointmentCautionsUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/AppointmentCautionsUpdated_v1.001.json"
+
+    CreateCaution:
+      name: "CreateCaution"
+      schemaUri: "https://sv.telesv.com/schemas/CreateCaution_v1.001.json"
+      domainEvent:
+        name: "CautionCreated"
+        schemaUri: "https://sv.telesv.com/schemas/CautionCreated_v1.001.json"
+
+    UpdateAppointmentCautions:
+      name: "UpdateAppointmentCautions"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateAppointmentCautions_v1.001.json"
+      domainEvent:
+        name: "AppointmentCautionsUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/AppointmentCautionsUpdated_v1.001.json"
+
+    UpdateCaution:
+      name: "UpdateCaution"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateCaution_v1.001.json"
+      domainEvent:
+        name: "CautionUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/CautionUpdated_v1.001.json"
+
+    UpdateDepartmentCautions:
+      name: "UpdateDepartmentCautions"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateDepartmentCautions_v1.001.json"
+      domainEvent:
+        name: "DepartmentCautionsUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/DepartmentCautionsUpdated_v1.001.json"
+
+    CreateDepartmentCautions:
+      name: "CreateDepartmentCautions"
+      schemaUri: "https://sv.telesv.com/schemas/CreateDepartmentCautions_v1.001.json"
+      domainEvent:
+        name: "DepartmentCautionsCreated"
+        schemaUri: "https://sv.telesv.com/schemas/DepartmentCautionsCreated_v1.001.json"
+      index:
+        - "locationId"
+
+    CreateAppointmentCautions:
+      name: "CreateAppointmentCautions"
+      schemaUri: "https://sv.telesv.com/schemas/CreateAppointmentCautions_v1.001.json"
+      domainEvent:
+        name: "AppointmentCautionsCreated"
+        schemaUri: "https://sv.telesv.com/schemas/AppointmentCautionsCreated_v1.001.json"

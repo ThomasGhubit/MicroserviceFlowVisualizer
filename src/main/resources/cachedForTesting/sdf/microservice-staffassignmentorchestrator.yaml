@@ -1,0 +1,31 @@
+---
+name: "StaffAssignmentOrchestrator"
+type: "saga"
+version: "1.0.0"
+consumes:
+  events:
+    UnitCoverageUpdated:
+      name: "UnitCoverageUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/UnitCoverageUpdated_v1.001.json"
+      commands:
+        UpdateStaffAssignmentForBedLocation:
+          name: "UpdateStaffAssignmentForBedLocation"
+          schemaUri: "https://sv.telesv.com/schemas/UpdateStaffAssignmentForBedLocation_v1.001.json"
+    UnitCoverageCreated:
+      name: "UnitCoverageCreated"
+      schemaUri: "https://sv.telesv.com/schemas/UnitCoverageCreated_v1.001.json"
+    ResponsibilityCreated:
+      name: "ResponsibilityCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ResponsibilityCreated_v1.003.json"
+    StaffAssignmentForBedLocationCreated:
+      name: "StaffAssignmentForBedLocationCreated"
+      schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForBedLocationCreated_v1.001.json"
+    LocationAssociationCreatedEvent:
+      name: "LocationAssociationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationCreatedEvent_v2.002.json"
+    UnitCreatedEvent:
+      name: "UnitCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UnitCreatedEvent_v1.004.json"
+    CoverageDefinitionCreated:
+      name: "CoverageDefinitionCreated"
+      schemaUri: "https://sv.telesv.com/schemas/CoverageDefinitionCreated_v1.001.json"

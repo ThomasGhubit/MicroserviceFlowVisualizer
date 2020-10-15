@@ -1,0 +1,35 @@
+---
+name: "StaffAdminDetails"
+type: "readstore"
+version: "1.0.0"
+consumes:
+  events:
+    StaffCreatedEvent:
+      name: "StaffCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/StaffCreatedEvent_v2.001.json"
+    FacilityCreatedEvent:
+      name: "FacilityCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCreatedEvent_v1.003.json"
+    FacilityUpdatedEvent:
+      name: "FacilityUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityUpdatedEvent_v1.003.json"
+    PositionCreated:
+      name: "PositionCreated"
+      schemaUri: "https://sv.telesv.com/schemas/PositionCreated_v1.001.json"
+    PositionUpdated:
+      name: "PositionUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/PositionUpdated_v1.001.json"
+    SkillGroupCreated:
+      name: "SkillGroupCreated"
+      schemaUri: "https://sv.telesv.com/schemas/SkillGroupCreated_v1.001.json"
+    SkillGroupUpdated:
+      name: "SkillGroupUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/SkillGroupUpdated_v1.001.json"
+    StaffUpdatedEvent:
+      name: "StaffUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/StaffUpdatedEvent_v1.001.json"
+  commands:
+    GetStaffAdminDetails:
+      name: "GetStaffAdminDetails"
+      schemaUri: "https://sv.telesv.com/schemas/GetStaffAdminDetails_v1.001.json"
+      viewModelSchemaUri: "https://sv.telesv.com/schemas/StaffAdminDetailsViewModel_v2.001.json"

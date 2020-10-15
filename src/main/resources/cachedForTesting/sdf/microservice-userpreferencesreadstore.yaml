@@ -1,0 +1,6 @@
+---
+name: "UserPreferencesReadStore"
+type: "readstore"
+version: "1.0.0"
+consumes:
+  events:

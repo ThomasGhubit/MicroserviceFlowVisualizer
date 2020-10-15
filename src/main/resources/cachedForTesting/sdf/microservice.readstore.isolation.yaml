@@ -1,0 +1,20 @@
+---
+name: "Isolation"
+type: "readstore"
+version: "0.0.1"
+consumes:
+  events:
+    IsolationCreatedEvent:
+      name: "IsolationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/IsolationCreatedEvent_v1.001.json"
+    IsolationUpdatedEvent:
+      name: "IsolationUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/IsolationUpdatedEvent_v1.001.json"
+    IsolationDeletedEvent:
+      name: "IsolationDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/IsolationDeletedEvent_v1.001.json"
+  commands:
+    SearchForIsolations:
+      name: "GetSearchForIsolations"
+      schemaUri: "https://sv.telesv.com/schemas/SearchForIsolations_v1.001.json"
+      viewModelSchemaUri: "https://sv.telesv.com/schemas/IsolationViewModel_v1.001.json"

@@ -1,0 +1,61 @@
+---
+name: "JobOrchestrator"
+type: "saga"
+version: "1.0.0"
+consumes:
+  events:
+    ProcedureAppointmentUpdated:
+      name: "ProcedureAppointmentUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentUpdated_v1.002.json"
+      commands:
+        CancelDeliveryJob:
+          name: "CancelDeliveryJob"
+          schemaUri: "https://sv.telesv.com/schemas/CancelDeliveryJob_v1.001.json"
+        CancelPickupJob:
+          name: "CancelPickupJob"
+          schemaUri: "https://sv.telesv.com/schemas/CancelPickupJob_v1.001.json"
+        CancelServiceJob:
+          name: "CancelServiceJob"
+          schemaUri: "https://sv.telesv.com/schemas/CancelServiceJob_v1.001.json"
+        CancelStaffJob:
+          name: "CancelStaffJob"
+          schemaUri: "https://sv.telesv.com/schemas/CancelStaffJob_v1.001.json"
+    ProcedureAppointmentCreated:
+      name: "ProcedureAppointmentCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentCreated_v1.002.json"
+    ServiceJobCreated:
+      name: "ServiceJobCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ServiceJobCreated_v2.001.json"
+    DeliveryJobCreated:
+      name: "DeliveryJobCreated"
+      schemaUri: "https://sv.telesv.com/schemas/DeliveryJobCreated_v2.001.json"
+    PickupJobCreated:
+      name: "PickupJobCreated"
+      schemaUri: "https://sv.telesv.com/schemas/PickupJobCreated_v2.001.json"
+    StaffJobCreated:
+      name: "StaffJobCreated"
+      schemaUri: "https://sv.telesv.com/schemas/StaffJobCreated_v2.001.json"
+    ServiceJobUpdated:
+      name: "ServiceJobUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/ServiceJobUpdated_v2.001.json"
+    DeliveryJobUpdated:
+      name: "DeliveryJobUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/DeliveryJobUpdated_v2.001.json"
+    PickupJobUpdated:
+      name: "PickupJobUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/PickupJobUpdated_v2.001.json"
+    StaffJobUpdated:
+      name: "StaffJobUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/StaffJobUpdated_v2.001.json"
+    StaffJobStatusChanged:
+      name: "StaffJobStatusChanged"
+      schemaUri: "https://sv.telesv.com/schemas/StaffJobStatusChanged_v1.001.json"
+    ServiceJobStatusChanged:
+      name: "ServiceJobStatusChanged"
+      schemaUri: "https://sv.telesv.com/schemas/ServiceJobStatusChanged_v1.002.json"
+    DeliveryJobStatusChanged:
+      name: "DeliveryJobStatusChanged"
+      schemaUri: "https://sv.telesv.com/schemas/DeliveryJobStatusChanged_v1.002.json"
+    PickupJobStatusChanged:
+      name: "PickupJobStatusChanged"
+      schemaUri: "https://sv.telesv.com/schemas/PickupJobStatusChanged_v1.002.json"

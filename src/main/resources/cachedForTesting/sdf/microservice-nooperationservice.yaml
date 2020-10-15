@@ -1,0 +1,15 @@
+---
+name: "NoOperationService"
+type: "orchestrator"
+version: "1.0.0"
+consumes:
+  events:
+    SkillCreated:
+      name: "SkillCreated"
+      schemaUri: "https://sv.telesv.com/schemas/SkillCreated_v1.001.json"
+      commands:
+        NoOperation:
+          name: "NoOperation"
+          schemaUri: "https://sv.telesv.com/schemas/NoOperation_v1.001.json"
+          roles:
+            - "TELETRACKING_BEST_PRACTICE_DEFINITION_ADMINISTRATOR"

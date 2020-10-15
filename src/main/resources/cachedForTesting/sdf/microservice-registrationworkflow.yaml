@@ -1,0 +1,26 @@
+---
+name: "RegistrationWorkflow"
+type: "transactional"
+version: "1.0.0"
+consumes:
+  events:
+    PerioperativeMilestoneCreated:
+      name: "PerioperativeMilestoneCreated"
+      schemaUri: "https://sv.telesv.com/schemas/PerioperativeMilestoneCreated_v1.001.json"
+    PerioperativeMilestoneUpdated:
+      name: "PerioperativeMilestoneUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/PerioperativeMilestoneUpdated_v1.001.json"
+    PerioperativeMilestoneSetCompleted:
+      name: "PerioperativeMilestoneSetCompleted"
+      schemaUri: "https://sv.telesv.com/schemas/PerioperativeMilestoneSetCompleted_v1.001.json"
+  commands:
+    CompletePerioperativeMilestone:
+      name: "CompletePerioperativeMilestone"
+      schemaUri: "https://sv.telesv.com/schemas/CompletePerioperativeMilestone_v1.001.json"
+      roles:
+        - "Registration Administrator"
+    InitializePerioperativeProcess:
+      name: "InitializePerioperativeProcess"
+      schemaUri: "https://sv.telesv.com/schemas/InitializePerioperativeProcess_v2.001.json"
+      roles:
+        - "Registration Administrator"

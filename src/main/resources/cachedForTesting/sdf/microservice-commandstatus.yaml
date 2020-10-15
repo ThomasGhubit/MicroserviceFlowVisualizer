@@ -1,0 +1,7 @@
+---
+name: "CommandStatus"
+type: "domain"
+version: "1.0.0"
+consumes:
+  events:
+  commands:

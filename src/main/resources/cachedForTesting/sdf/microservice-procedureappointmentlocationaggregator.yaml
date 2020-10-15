@@ -1,0 +1,55 @@
+---
+name: "ProcedureAppointmentLocationAggregator"
+type: "transactional"
+version: "1.0.0"
+consumes:
+  commands:
+    MarkPatientArrivedAtBedLocationForProceduralAppointment:
+      name: "MarkPatientArrivedAtBedLocationForProceduralAppointment"
+      schemaUri: "https://sv.telesv.com/schemas/MarkPatientArrivedAtBedLocationForProceduralAppointment_v2.001.json"
+      roles:
+        - "Registration Administrator"
+      domainEvent:
+        name: "PatientArrivedAtBedLocationForProceduralAppointment"
+        schemaUri: "https://sv.telesv.com/schemas/PatientArrivedAtBedLocationForProceduralAppointment_v2.001.json"
+    MarkPatientLeftBedLocation:
+      name: "MarkPatientLeftBedLocation"
+      schemaUri: "https://sv.telesv.com/schemas/MarkPatientLeftBedLocation_v2.001.json"
+      roles:
+        - "Registration Administrator"
+      domainEvent:
+        name: "PatientLeftBedLocation"
+        schemaUri: "https://sv.telesv.com/schemas/PatientLeftBedLocation_v2.001.json"
+    MovePatientBetweenBays:
+      name: "MovePatientBetweenBays"
+      schemaUri: "https://sv.telesv.com/schemas/MovePatientBetweenBays_v2.001.json"
+      roles:
+        - "Registration Administrator"
+      domainEvent:
+        name: "PatientMovedBetweenBays"
+        schemaUri: "https://sv.telesv.com/schemas/PatientMovedBetweenBays_v2.001.json"
+  events:
+    PatentLocationChanged:
+      name: "PatientLocationChanged"
+      schemaUri: "https://sv.telesv.com/schemas/PatientLocationChanged_v1.001.json"
+    LocationReservationCreated:
+      name: "LocationReservationCreated"
+      schemaUri: "https://sv.telesv.com/schemas/LocationReservationCreated_v1.002.json"
+    PatientLeftBedLocation:
+      name: "PatientLeftBedLocation"
+      schemaUri: "https://sv.telesv.com/schemas/PatientLeftBedLocation_v2.001.json"
+    PatientCreatedEvent:
+      name: "PatientCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientCreatedEvent_v2.001.json"
+    PatientUpdatedEvent:
+      name: "PatientUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientUpdatedEvent_v2.001.json"
+    ProcedureAppointmentCreated:
+      name: "ProcedureAppointmentCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentCreated_v1.001.json"
+    BedLocationCreatedEvent:
+      name: "BedLocationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationCreatedEvent_v2.001.json"
+    PatientArrivedAtBedLocationForProceduralAppointment:
+      name: "PatientArrivedAtBedLocationForProceduralAppointment"
+      schemaUri: "https://sv.telesv.com/schemas/PatientArrivedAtBedLocationForProceduralAppointment_v2.001.json"

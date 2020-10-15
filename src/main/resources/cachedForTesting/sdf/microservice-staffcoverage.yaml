@@ -1,0 +1,5 @@
+---
+name: "StaffCoverage"
+type: "transactional"
+version: "1.0.0"
+consumes:

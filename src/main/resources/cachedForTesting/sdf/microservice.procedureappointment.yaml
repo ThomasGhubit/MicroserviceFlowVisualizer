@@ -1,0 +1,70 @@
+---
+name: "ProcedureAppointment"
+type: "transactional"
+version: "1.0.0"
+consumes:
+  events:
+    ProcedureAppointmentCreated:
+      name: "ProcedureAppointmentCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentCreated_v1.003.json"
+    ProcedureAppointmentUpdated:
+      name: "ProcedureAppointmentUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentUpdated_v1.003.json"
+    PatientArrivedForAppointment:
+      name: "PatientArrivedForAppointment"
+      schemaUri: "https://sv.telesv.com/schemas/PatientArrivedForAppointment_v1.001.json"
+    ProcedureAppointmentCancelled:
+      name: "ProcedureAppointmentCancelled"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentCancelled_v1.002.json"
+  commands:
+    CreateProcedureAppointment:
+      name: "CreateProcedureAppointment"
+      schemaUri: "https://sv.telesv.com/schemas/CreateProcedureAppointment_v1.002.json"
+      roles:
+        - "Registration Administrator"
+        - "ORCHESTRATOR"
+      domainEvent:
+        name: "ProcedureAppointmentCreated"
+        schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentCreated_v1.003.json"
+    UpdateProcedureAppointment:
+      name: "UpdateProcedureAppointment"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateProcedureAppointment_v1.002.json"
+      roles:
+        - "Registration Administrator"
+        - "ORCHESTRATOR"
+      domainEvent:
+        name: "ProcedureAppointmentUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentUpdated_v1.003.json"
+    MarkPatientArrived:
+      name: "MarkPatientArrived"
+      schemaUri: "https://sv.telesv.com/schemas/MarkPatientArrived_v1.001.json"
+      roles:
+        - "Registration Administrator"
+      domainEvent:
+        name: "PatientArrivedForAppointment"
+        schemaUri: "https://sv.telesv.com/schemas/PatientArrivedForAppointment_v1.001.json"
+      events:
+        ProcedureAppointmentUpdated:
+          name: "ProcedureAppointmentUpdated"
+          schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentUpdated_v1.003.json"
+    ChangeProcedureAppointmentStatus:
+      name: "ChangeProcedureAppointmentStatus"
+      schemaUri: "https://sv.telesv.com/schemas/ChangeProcedureAppointmentStatus_v1.001.json"
+      roles:
+        - "Registration Administrator"
+      domainEvent:
+        name: "ProcedureAppointmentUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentUpdated_v1.003.json"
+    CancelProcedureAppointment:
+      name: "CancelProcedureAppointment"
+      schemaUri: "https://sv.telesv.com/schemas/CancelProcedureAppointment_v1.002.json"
+      roles:
+        - "Registration Administrator"
+        - "ORCHESTRATOR"
+      domainEvent:
+        name: "ProcedureAppointmentCancelled"
+        schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentCancelled_v1.002.json"
+      events:
+        ProcedureAppointmentUpdated:
+          name: "ProcedureAppointmentUpdated"
+          schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentUpdated_v1.003.json"

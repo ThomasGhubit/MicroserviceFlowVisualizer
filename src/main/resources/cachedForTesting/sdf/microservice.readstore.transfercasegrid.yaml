@@ -1,0 +1,359 @@
+---
+name: "TransferCaseGrid"
+type: "readstore"
+version: "0.0.1"
+consumes:
+  events:
+    AllergyCreatedEvent:
+      name: "AllergyCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/AllergyCreatedEvent_v1.001.json"
+    AllergyUpdatedEvent:
+      name: "AllergyUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/AllergyUpdatedEvent_v1.001.json"
+
+    PatientCreatedEvent:
+      name: "PatientCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientCreatedEvent_v2.001.json"
+    PatientUpdatedEvent:
+      name: "PatientUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientUpdatedEvent_v2.001.json"
+
+    PatientVisitUpdatedEvent:
+      name: "PatientVisitUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientVisitUpdatedEvent_v2.002.json"
+    PatientVisitCreatedEvent:
+      name: "PatientVisitCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientVisitCreatedEvent_v2.002.json"
+
+    PhysicianCreatedEvent:
+      name: "PhysicianCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCreatedEvent_v1.001.json"
+    PhysicianUpdatedEvent:
+      name: "PhysicianUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianUpdatedEvent_v1.001.json"
+
+    DiagnosisCreatedEvent:
+      name: "DiagnosisCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/DiagnosisCreatedEvent_v1.001.json"
+    DiagnosisUpdatedEvent:
+      name: "DiagnosisUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/DiagnosisUpdatedEvent_v1.001.json"
+
+    LevelOfCareCreatedEvent:
+      name: "LevelOfCareCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LevelOfCareCreatedEvent_v1.001.json"
+    LevelOfCareUpdatedEvent:
+      name: "LevelOfCareUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LevelOfCareUpdatedEvent_v1.001.json"
+
+    PayorCreatedEvent:
+      name: "PayorCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PayorCreatedEvent_v1.002.json"
+    PayorUpdatedEvent:
+      name: "PayorUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PayorUpdatedEvent_v1.002.json"
+
+    SpecialtyCreatedEvent:
+      name: "SpecialtyCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/SpecialtyCreatedEvent_v1.001.json"
+    SpecialtyUpdatedEvent:
+      name: "SpecialtyUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/SpecialtyUpdatedEvent_v1.001.json"
+
+    IsolationCreatedEvent:
+      name: "IsolationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/IsolationCreatedEvent_v1.001.json"
+    IsolationUpdatedEvent:
+      name: "IsolationUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/IsolationUpdatedEvent_v1.001.json"
+
+    OrganismCreatedEvent:
+      name: "OrganismCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/OrganismCreatedEvent_v1.001.json"
+    OrganismUpdatedEvent:
+      name: "OrganismUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/OrganismUpdatedEvent_v1.001.json"
+
+    MedicalAlertCreatedEvent:
+      name: "MedicalAlertCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/MedicalAlertCreatedEvent_v1.001.json"
+    MedicalAlertUpdatedEvent:
+      name: "MedicalAlertUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/MedicalAlertUpdatedEvent_v1.001.json"
+
+    TreatmentCreatedEvent:
+      name: "TreatmentCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/TreatmentCreatedEvent_v1.001.json"
+    TreatmentUpdatedEvent:
+      name: "TreatmentUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/TreatmentUpdatedEvent_v1.001.json"
+
+    CaseCreatedEvent:
+      name: "CaseCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseCreatedEvent_v1.004.json"
+    CaseUpdatedEvent:
+      name: "CaseUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseUpdatedEvent_v1.004.json"
+
+    CaseTypeCreatedEvent:
+      name: "CaseTypeCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseTypeCreatedEvent_v2.001.json"
+    CaseTypeUpdatedEvent:
+      name: "CaseTypeUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseTypeUpdatedEvent_v2.001.json"
+
+    DispositionReasonCreatedEvent:
+      name: "DispositionReasonCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/DispositionReasonCreatedEvent_v2.001.json"
+    DispositionReasonUpdatedEvent:
+      name: "DispositionReasonUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/DispositionReasonUpdatedEvent_v2.001.json"
+
+    DispositionCreatedEvent:
+      name: "DispositionCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/DispositionCreatedEvent_v2.001.json"
+    DispositionUpdatedEvent:
+      name: "DispositionUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/DispositionUpdatedEvent_v2.001.json"
+
+    FacilityCreatedEvent:
+      name: "FacilityCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCreatedEvent_v1.003.json"
+    FacilityUpdatedEvent:
+      name: "FacilityUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityUpdatedEvent_v1.003.json"
+
+    UserCreatedEvent:
+      name: "UserCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UserCreatedEvent_v1.002.json"
+    UserUpdatedEvent:
+      name: "UserUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UserUpdatedEvent_v1.002.json"
+
+    ReferralCreated:
+      name: "ReferralCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ReferralCreated_v1.003.json"
+    ReferralUpdatedEvent:
+      name: "ReferralUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/ReferralUpdated_v1.003.json"
+
+    TransferReasonCreatedEvent:
+      name: "TransferReasonCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/TransferReasonCreatedEvent_v1.001.json"
+    TransferReasonUpdatedEvent:
+      name: "TransferReasonUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/TransferReasonUpdatedEvent_v1.001.json"
+
+    UnitCreatedEvent:
+      name: "UnitCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UnitCreatedEvent_v1.004.json"
+    UnitUpdatedEvent:
+      name: "UnitUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UnitUpdatedEvent_v1.004.json"
+
+    PatientCodeStatusCreatedEvent:
+      name: "PatientCodeStatusCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientCodeStatusCreatedEvent_v1.001.json"
+    PatientCodeStatusUpdatedEvent:
+      name: "PatientCodeStatusUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientCodeStatusUpdatedEvent_v1.001.json"
+
+    PatientTypeCreatedEvent:
+      name: "PatientTypeCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientTypeCreatedEvent_v1.001.json"
+    PatientTypeUpdatedEvent:
+      name: "PatientTypeUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientTypeUpdatedEvent_v1.001.json"
+
+    PatientTransportCreatedEvent:
+      name: "PatientTransportCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientTransportCreatedEvent_v1.006.json"
+    PatientTransportUpdatedEvent:
+      name: "PatientTransportUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientTransportUpdatedEvent_v1.006.json"
+    TransportModeCreatedEvent:
+      name: "TransportModeCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/TransportModeCreatedEvent_v1.001.json"
+    TransportModeUpdatedEvent:
+      name: "TransportModeUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/TransportModeUpdatedEvent_v1.001.json"
+    PatientVisitProtocolDocumentCreatedEvent:
+      name: "PatientVisitProtocolDocumentCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientVisitProtocolDocumentCreated_v1.001.json"
+    PatientVisitProtocolDocumentUpdatedEvent:
+      name: "PatientVisitProtocolDocumentUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientVisitProtocolDocumentUpdated_v1.001.json"
+    ProtocolCreatedEvent:
+      name: "ProtocolCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/ProtocolCreated_v1.001.json"
+    ProtocolUpdatedEvent:
+      name: "ProtocolUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/ProtocolUpdated_v1.001.json"
+
+    CaseIssueCreatedEvent:
+      name: "CaseIssueCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseIssueCreated_v1.001.json"
+    CaseIssueUpdatedEvent:
+      name: "CaseIssueUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseIssueUpdated_v1.001.json"
+    CaseIssueDeletedEvent:
+      name: "CaseIssueDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/CaseIssueDeleted_v1.001.json"
+
+    CaseNoteCreated:
+      name: "CaseNoteCreated"
+      schemaUri: "https://sv.telesv.com/schemas/CaseNoteCreated_v1.001.json"
+    CaseNoteUpdated:
+      name: "CaseNoteUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/CaseNoteUpdated_v1.001.json"
+    CaseNoteDeleted:
+      name: "CaseNoteDeleted"
+      schemaUri: "https://sv.telesv.com/schemas/CaseNoteDeleted_v1.001.json"
+    BedRequestCreated:
+      name: "BedRequestCreated"
+      schemaUri: "https://sv.telesv.com/schemas/BedRequestCreated_v2.001.json"
+    BedRequestUpdated:
+      name: "BedRequestUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/BedRequestUpdated_v2.001.json"
+
+    TagCreatedEvent:
+      name: "TagCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/TagCreatedEvent_v1.001.json"
+    TagUpdatedEvent:
+      name: "TagUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/TagUpdatedEvent_v1.001.json"
+
+    GridConfigurationCreated:
+      name: "GridConfigurationCreated"
+      schemaUri: "https://sv.telesv.com/schemas/GridConfigurationCreated_v2.003.json"
+    GridConfigurationUpdated:
+      name: "GridConfigurationUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/GridConfigurationUpdated_v2.003.json"
+
+    EscalationCaseCommunicationContactCreatedEvent:
+      name: "EscalationCaseCommunicationContactCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationCaseCommunicationContactCreatedEvent_v2.002.json"
+    EscalationCaseCommunicationContactUpdatedEvent:
+      name: "EscalationCaseCommunicationContactUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationCaseCommunicationContactUpdatedEvent_v2.002.json"
+    EscalationCaseCommunicationContactDeletedEvent:
+      name: "EscalationCaseCommunicationContactDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationCaseCommunicationContactDeletedEvent_v2.002.json"
+
+    PhysicianCaseCommunicationContactCreatedEvent:
+      name: "PhysicianCaseCommunicationContactCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationContactCreatedEvent_v2.001.json"
+    PhysicianCaseCommunicationContactUpdatedEvent:
+      name: "PhysicianCaseCommunicationContactUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationContactUpdatedEvent_v2.001.json"
+    PhysicianCaseCommunicationContactDeletedEvent:
+      name: "PhysicianCaseCommunicationContactDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationContactDeletedEvent_v2.001.json"
+
+    FacilityCaseCommunicationContactCreatedEvent:
+      name: "FacilityCaseCommunicationContactCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationContactCreatedEvent_v2.001.json"
+    FacilityCaseCommunicationContactUpdatedEvent:
+      name: "FacilityCaseCommunicationContactUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationContactUpdatedEvent_v2.001.json"
+    FacilityCaseCommunicationContactDeletedEvent:
+      name: "FacilityCaseCommunicationContactDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationContactDeletedEvent_v2.001.json"
+
+    EscalationCaseCommunicationOutcomeCreatedEvent:
+      name: "EscalationCaseCommunicationOutcomeCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationCaseCommunicationOutcomeCreatedEvent_v2.002.json"
+    EscalationCaseCommunicationOutcomeUpdatedEvent:
+      name: "EscalationCaseCommunicationOutcomeUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationCaseCommunicationOutcomeUpdatedEvent_v2.002.json"
+    EscalationCaseCommunicationOutcomeDeletedEvent:
+      name: "EscalationCaseCommunicationOutcomeDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/EscalationCaseCommunicationOutcomeDeletedEvent_v2.002.json"
+
+    FacilityCaseCommunicationOutcomeCreatedEvent:
+      name: "FacilityCaseCommunicationOutcomeCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationOutcomeCreatedEvent_v2.001.json"
+    FacilityCaseCommunicationOutcomeUpdatedEvent:
+      name: "FacilityCaseCommunicationOutcomeUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationOutcomeUpdatedEvent_v2.001.json"
+    FacilityCaseCommunicationOutcomeDeletedEvent:
+      name: "FacilityCaseCommunicationOutcomeDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCaseCommunicationOutcomeDeletedEvent_v2.001.json"
+
+    PhysicianCaseCommunicationOutcomeCreatedEvent:
+      name: "PhysicianCaseCommunicationOutcomeCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationOutcomeCreatedEvent_v2.001.json"
+    PhysicianCaseCommunicationOutcomeUpdatedEvent:
+      name: "PhysicianCaseCommunicationOutcomeUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationOutcomeUpdatedEvent_v2.001.json"
+    PhysicianCaseCommunicationOutcomeDeletedEvent:
+      name: "PhysicianCaseCommunicationOutcomeDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PhysicianCaseCommunicationOutcomeDeletedEvent_v2.001.json"
+
+    TransportCompanyCreated:
+      name: "TransportCompanyCreated"
+      schemaUri: "https://sv.telesv.com/schemas/TransportCompanyCreated_v1.001.json"
+    TransportCompanyUpdated:
+      name: "TransportCompanyUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/TransportCompanyUpdated_v1.001.json"
+
+    TransportArrangementsCreatedEvent:
+      name: "TransportArrangementsCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/TransportArrangementsCreated_v1.001.json"
+    TransportArrangementsUpdatedEvent:
+      name: "TransportArrangementsUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/TransportArrangementsUpdated_v1.001.json"
+
+    ExternalPatientTransportPartnerCreated:
+      name: "ExternalPatientTransportPartnerCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ExternalPatientTransportPartnerCreated_v1.002.json"
+    ExternalPatientTransportPartnerUpdated:
+      name: "ExternalPatientTransportPartnerUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/ExternalPatientTransportPartnerUpdated_v1.002.json"
+
+    PatientVisitDocumentCreated:
+      name: "PatientVisitDocumentCreated"
+      schemaUri: "https://sv.telesv.com/schemas/PatientVisitDocumentCreated_v1.001.json"
+    PatientVisitDocumentUpdated:
+      name: "PatientVisitDocumentUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/PatientVisitDocumentUpdated_v1.001.json"
+    PatientVisitDocumentDeleted:
+      name: "PatientVisitDocumentDeleted"
+      schemaUri: "https://sv.telesv.com/schemas/PatientVisitDocumentDeleted_v1.001.json"
+
+    PatientVisitQuestionAnswerCreatedEvent:
+      name: "PatientVisitQuestionAnswerCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientVisitQuestionAnswerCreated_v1.001.json"
+    PatientVisitQuestionAnswerUpdatedEvent:
+      name: "PatientVisitQuestionAnswerUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientVisitQuestionAnswerUpdated_v1.001.json"
+
+    GridDefaultViewConfigurationCreated:
+      name: "GridDefaultViewConfigurationCreated"
+      schemaUri: "https://sv.telesv.com/schemas/GridDefaultViewConfigurationCreated_v1.001.json"
+    GridDefaultViewConfigurationUpdated:
+      name: "GridDefaultViewConfigurationUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/GridDefaultViewConfigurationUpdated_v1.001.json"
+    UserGridViewConfigurationCreated:
+      name: "UserGridViewConfigurationCreated"
+      schemaUri: "https://sv.telesv.com/schemas/GridViewConfigurationCreated_v1.001.json"
+    UserGridViewConfigurationUpdated:
+      name: "UserGridViewConfigurationUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/GridViewConfigurationUpdated_v1.001.json"
+
+
+  commands:
+    GetGridList:
+      name: "GetGridList"
+      schemaUri: "https://sv.telesv.com/schemas/GetGridList_v3.001.json"
+      viewModelSchemaUri: "https://sv.telesv.com/schemas/TransferCaseGridViewModel_v3.001.json"
+
+    GetGridCount:
+      name: "GetGridCount"
+      schemaUri: "https://sv.telesv.com/schemas/GetGridCount_v1.001.json"
+      viewModelSchemaUri: "https://sv.telesv.com/schemas/GridCountViewModel_v1.001.json"
+
+    GetGridViewConfiguration:
+      name: "GetGridViewConfiguration"
+      schemaUri: "https://sv.telesv.com/schemas/GetGridViewConfiguration_v1.001.json"
+      viewModelSchemaUri: "https://sv.telesv.com/schemas/GridViewConfigurationViewModel_v2.002.json"

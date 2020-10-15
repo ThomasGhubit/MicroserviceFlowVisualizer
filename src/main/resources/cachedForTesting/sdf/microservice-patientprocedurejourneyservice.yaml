@@ -1,0 +1,25 @@
+---
+name: PatientProcedureJourneyService
+type: "transactional"
+version: "1.0.0"
+consumes:
+  events:
+    PatientProcedureJourneyCreated:
+      name: "PatientProcedureJourneyCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientProcedureJourneyCreated_v1.002.json"
+    PatientProcedureJourneyUpdated:
+      name: "PatientProcedureJourneyUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientProcedureJourneyUpdated_v1.002.json"
+  commands:
+    CreatePatientProcedureJourney:
+      name: "CreatePatientProcedureJourneyCommand"
+      schemaUri: "https://sv.telesv.com/schemas/CreatePatientProcedureJourney_v1.002.json"
+      domainEvent:
+        name: "PatientProcedureJourneyCreatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/PatientProcedureJourneyCreated_v1.002.json"
+    UpdatePatientProcedureJourney:
+      name: "UpdatePatientProcedureJourneyCommand"
+      schemaUri: "https://sv.telesv.com/schemas/UpdatePatientProcedureJourney_v1.002.json"
+      domainEvent:
+        name: "PatientProcedureJourneyUpdatedEvent"
+        schemaUri: "https://sv.telesv.com/schemas/PatientProcedureJourneyUpdated_v1.002.json"

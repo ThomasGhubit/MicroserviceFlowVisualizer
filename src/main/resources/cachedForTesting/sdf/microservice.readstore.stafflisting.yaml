@@ -1,0 +1,44 @@
+---
+name: "StaffListing"
+type: "readstore"
+version: "1.0.0"
+consumes:
+  events:
+    StaffCreatedEvent:
+      name: "StaffCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/StaffCreatedEvent_v2.002.json"
+    SkillGroupCreated:
+      name: "SkillGroupCreated"
+      schemaUri: "https://sv.telesv.com/schemas/SkillGroupCreated_v1.001.json"
+    ResponsibilityCreated:
+      name: "ResponsibilityCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ResponsibilityCreated_v1.003.json"
+    PositionCreated:
+      name: "PositionCreated"
+      schemaUri: "https://sv.telesv.com/schemas/PositionCreated_v1.001.json"
+    LocationAssociationCreatedEvent:
+      name: "LocationAssociationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationCreatedEvent_v2.002.json"
+    LocationAssociationUpdatedEvent:
+      name: "LocationAssociationUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationUpdatedEvent_v2.002.json"
+    UnitResponsibilitiesCreated:
+      name: "UnitResponsibilitiesCreated"
+      schemaUri: "https://sv.telesv.com/schemas/UnitResponsibilitiesCreated_v1.001.json"
+    ResponsibilityUpdated:
+      name: "ResponsibilityUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/ResponsibilityUpdated_v1.003.json"
+    StaffSkillsChanged:
+      name: "StaffSkillsChanged"
+      schemaUri: "https://sv.telesv.com/schemas/StaffSkillsChanged_v1.001.json"
+    StaffAssignmentForBedLocationCreated:
+      name: "StaffAssignmentForBedLocationCreated"
+      schemaUri: "https://sv.telesv.com/schemas/StaffAssignmentForBedLocationCreated_v1.001.json"
+    UnitCoverageCreated:
+      name: "UnitCoverageCreated"
+      schemaUri: "https://sv.telesv.com/schemas/UnitCoverageCreated_v1.001.json"
+  commands:
+    GetStaffList:
+      name: "GetStaffList"
+      schemaUri: "https://sv.telesv.com/schemas/GetStaffList_v3.001.json"
+      viewModelSchemaUri: "https://sv.telesv.com/schemas/StaffListViewModel_v5.001.json"
