@@ -151,7 +151,7 @@
 
     $.ajax({
       // url: "/visualize"
-      url: "/model/visulaize.json"
+      url: "/model/visualize.json"
     }).then(function(data) {
       mcp.graph = data;
       mcp.newDoc();
