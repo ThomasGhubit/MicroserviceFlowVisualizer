@@ -1,0 +1,27 @@
+---
+name: "UnitStaffManagement"
+type: "readstore"
+version: "1.0.0"
+consumes:
+  events:
+    BedLocationOccupancyStatusChanged:
+      name: "BedLocationOccupancyStatusChanged"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationOccupancyStatusChanged_v1.001.json"
+    BedLocationAvailabilityStatusChanged:
+      name: "BedLocationAvailabilityStatusChanged"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationAvailabilityStatusChanged_v1.001.json"
+    BedLocationCleanlinessStatusChanged:
+      name: "BedLocationCleanlinessStatusChanged"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationCleanlinessStatusChanged_v1.001.json"
+    BedLocationCreatedEvent:
+      name: "BedLocationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationCreatedEvent_v2.001.json"
+    BedLocationUpdatedEvent:
+      name: "BedLocationUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationUpdatedEvent_v2.001.json"
+    BedLocationDeletedEvent:
+      name: "BedLocationDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationDeletedEvent_v1.001.json"
+    LocationAssociationCreatedEvent:
+      name: "LocationAssociationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationCreatedEvent_v2.002.json"

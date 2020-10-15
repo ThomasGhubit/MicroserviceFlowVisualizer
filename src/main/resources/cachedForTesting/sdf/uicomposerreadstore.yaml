@@ -1,0 +1,10 @@
+---
+name: "UIComposerReadStore"
+type: "readstore"
+version: "1.0.0"
+consumes:
+  events:
+    # For now using PatientCreatedEvent, as in future , thus service will use its own event.
+    PatientCreatedEvent:
+      name: "PatientCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientCreatedEvent_v1.001.json"

@@ -1,0 +1,52 @@
+---
+name: "PatientProcedureJourneyConfiguration"
+type: "transactional"
+version: "1.0.0"
+consumes:
+  events:
+    IncomingListEntryRuleSetCreated:
+      name: "IncomingListEntryRuleSetCreated"
+      schemaUri: "https://sv.telesv.com/schemas/IncomingListEntryRuleSetCreated_v1.001.json"
+    IncomingListEntryRuleSetUpdated:
+      name: "IncomingListEntryRuleSetUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/IncomingListEntryRuleSetUpdated_v1.001.json"
+    DepartmentCreatedEvent:
+      name: "DepartmentCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/DepartmentCreatedEvent_v1.002.json"
+    IncomingListIntermediateUnitRuleSetCreated:
+      name: "IncomingListIntermediateUnitRuleSetCreated"
+      schemaUri: "https://sv.telesv.com/schemas/IncomingListIntermediateUnitRuleSetCreated_v1.001.json"
+    IncomingListIntermediateUnitRuleSetUpdated:
+      name: "IncomingListIntermediateUnitRuleSetUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/IncomingListIntermediateUnitRuleSetUpdated_v1.001.json"
+    UnitCreatedEvent:
+      name: "UnitCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UnitCreatedEvent_v1.004.json"
+    LocationAssociationCreatedEvent:
+      name: "LocationAssociationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationCreatedEvent_v2.002.json"
+  commands:
+    CreateIncomingListEntryRuleSet:
+      name: "CreateIncomingListEntryRuleSet"
+      schemaUri: "https://sv.telesv.com/schemas/CreateIncomingListEntryRuleSet_v1.001.json"
+      domainEvent:
+        name: "IncomingListEntryRuleSetCreated"
+        schemaUri: "https://sv.telesv.com/schemas/IncomingListEntryRuleSetCreated_v1.001.json"
+    UpdateIncomingListEntryRuleSet:
+      name: "UpdateIncomingListEntryRuleSet"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateIncomingListEntryRuleSet_v1.001.json"
+      domainEvent:
+        name: "IncomingListEntryRuleSetUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/IncomingListEntryRuleSetUpdated_v1.001.json"
+    CreateIncomingListIntermediateUnitRuleSet:
+      name: "CreateIncomingListIntermediateUnitRuleSet"
+      schemaUri: "https://sv.telesv.com/schemas/CreateIncomingListIntermediateUnitRuleSet_v1.001.json"
+      domainEvent:
+        name: "IncomingListIntermediateUnitRuleSetCreated"
+        schemaUri: "https://sv.telesv.com/schemas/IncomingListIntermediateUnitRuleSetCreated_v1.001.json"
+    UpdateIncomingListIntermediateUnitRuleSet:
+      name: "UpdateIncomingListIntermediateUnitRuleSet"
+      schemaUri: "https://sv.telesv.com/schemas/UpdateIncomingListIntermediateUnitRuleSet_v1.001.json"
+      domainEvent:
+        name: "IncomingListIntermediateUnitRuleSetUpdated"
+        schemaUri: "https://sv.telesv.com/schemas/IncomingListIntermediateUnitRuleSetUpdated_v1.001.json"

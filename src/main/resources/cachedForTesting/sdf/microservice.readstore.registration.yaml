@@ -1,0 +1,91 @@
+---
+name: "RegistrationReadStore"
+type: "readstore"
+version: "1.0.0"
+consumes:
+  events:
+    ProcedureAppointmentCreated:
+      name: "ProcedureAppointmentCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentCreated_v1.001.json"
+    ProcedureAppointmentUpdated:
+      name: "ProcedureAppointmentUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentUpdated_v1.001.json"
+    PatientArrivedForAppointment:
+      name: "PatientArrivedForAppointment"
+      schemaUri: "https://sv.telesv.com/schemas/PatientArrivedForAppointment_v1.001.json"
+    PatientCreatedEvent:
+      name: "PatientCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientCreatedEvent_v1.001.json"
+    PatientUpdatedEvent:
+      name: "PatientUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientUpdatedEvent_v1.001.json"
+    PatientProcedureCreatedEvent:
+      name: "PatientProcedureCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientProcedureCreatedEvent_v1.001.json"
+    PatientProcedureUpdatedEvent:
+      name: "PatientProcedureUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientProcedureUpdatedEvent_v1.001.json"
+    FacilityCreatedEvent:
+      name: "FacilityCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCreatedEvent_v1.003.json"
+    FacilityUpdatedEvent:
+      name: "FacilityUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityUpdatedEvent_v1.003.json"
+    RoomCreatedEvent:
+      name: "RoomCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/RoomCreatedEvent_v1.003.json"
+    RoomUpdatedEvent:
+      name: "RoomUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/RoomUpdatedEvent_v1.003.json"
+    BedLocationCreatedEvent:
+      name: "BedLocationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationCreatedEvent_v2.001.json"
+    BedLocationUpdatedEvent:
+      name: "BedLocationUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationUpdatedEvent_v2.001.json"
+    UnitCreatedEvent:
+      name: "UnitCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UnitCreatedEvent_v1.004.json"
+    UnitUpdatedEvent:
+      name: "UnitUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UnitUpdatedEvent_v1.004.json"
+    PatientLocationChanged:
+      name: "PatientLocationChanged"
+      schemaUri: "https://sv.telesv.com/schemas/PatientLocationChanged_v1.001.json"
+    LocationReservationCreated:
+      name: "LocationReservationCreated"
+      schemaUri: "https://sv.telesv.com/schemas/LocationReservationCreated_v1.002.json"
+    LocationReservationUpdated:
+      name: "LocationReservationUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/LocationReservationUpdated_v1.002.json"
+    LocationAssociationCreatedEvent:
+      name: "LocationAssociationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationCreatedEvent_v1.002.json"
+    LocationAssociationDeletedEvent:
+      name: "LocationAssociationDeletedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationDeletedEvent_v1.002.json"
+    LocationAssociationUpdatedEvent:
+      name: "LocationAssociationUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/LocationAssociationUpdatedEvent_v1.002.json"
+    PerioperativeMilestoneSetCompleted:
+      name: "PerioperativeMilestoneSetCompleted"
+      schemaUri: "https://sv.telesv.com/schemas/PerioperativeMilestoneSetCompleted_v1.001.json"
+    PerioperativeMilestoneUpdated:
+      name: "PerioperativeMilestoneUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/PerioperativeMilestoneUpdated_v1.001.json"
+    PerioperativeMilestoneCreated:
+      name: "PerioperativeMilestoneCreated"
+      schemaUri: "https://sv.telesv.com/schemas/PerioperativeMilestoneCreated_v1.001.json"
+    AppointmentCautionsCreated:
+      name: "AppointmentCautionsCreated"
+      schemaUri: "https://sv.telesv.com/schemas/AppointmentCautionsCreated_v1.001.json"
+    AppointmentCautionsUpdated:
+      name: "AppointmentCautionsUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/AppointmentCautionsUpdated_v1.001.json"
+
+    PatientProcedureJourneyCreated:
+      name: "PatientProcedureJourneyCreated"
+      schemaUri: "https://sv.telesv.com/schemas/PatientProcedureJourneyCreated_v1.002.json"
+    PatientProcedureJourneyUpdated:
+      name: "PatientProcedureJourneyUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/PatientProcedureJourneyUpdated_v1.002.json"

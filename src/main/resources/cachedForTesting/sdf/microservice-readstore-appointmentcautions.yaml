@@ -1,0 +1,36 @@
+---
+name: "AppointmentCautions"
+type: "readstore"
+version: "1.0.0"
+consumes:
+  events:
+    AppointmentCautionsUpdated:
+      name: "AppointmentCautionsUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/AppointmentCautionsUpdated_v1.001.json"
+    AppointmentCautionsCreated:
+      name: "AppointmentCautionsCreated"
+      schemaUri: "https://sv.telesv.com/schemas/AppointmentCautionsCreated_v1.001.json"
+    CautionCreated:
+      name: "CautionCreated"
+      schemaUri: "https://sv.telesv.com/schemas/CautionCreated_v1.001.json"
+    CautionUpdated:
+      name: "CautionUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/CautionUpdated_v1.001.json"
+    DepartmentCautionsUpdated:
+      name: "DepartmentCautionsUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/DepartmentCautionsUpdated_v1.001.json"
+    DepartmentCautionsCreated:
+      name: "DepartmentCautionsCreated"
+      schemaUri: "https://sv.telesv.com/schemas/DepartmentCautionsCreated_v1.001.json"
+    ProcedureAppointmentCreated:
+      name: "ProcedureAppointmentCreated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentCreated_v1.002.json"
+    ProcedureAppointmentUpdated:
+      name: "ProcedureAppointmentUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/ProcedureAppointmentUpdated_v1.002.json"
+
+  commands:
+    GetAppointmentCautionsViewModel:
+      name: "GetAppointmentCautionsViewModel"
+      schemaUri: "https://sv.telesv.com/schemas/GetAppointmentCautionsViewModel_v1.001.json"
+      viewModelSchemaUri: "https://sv.telesv.com/schemas/AppointmentCautionsViewModel_v1.002.json"

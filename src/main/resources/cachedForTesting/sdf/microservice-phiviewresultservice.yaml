@@ -1,0 +1,9 @@
+---
+name: "PHIViewResultService"
+type: "transactional"
+version: "1.0.0"
+consumes:
+  commands:
+    CreateViewResult:
+      name: "CreateViewResult"
+      schemaUri: "https://sv.telesv.com/schemas/CreateViewResult_v1.001.json"

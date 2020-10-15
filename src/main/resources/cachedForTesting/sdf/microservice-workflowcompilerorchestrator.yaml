@@ -1,0 +1,33 @@
+---
+name: "WorkflowCompilerOrchestrator"
+type: "orchestrator"
+version: "1.0.0"
+consumes:
+  events:
+    RawWorkflowPackageCreated:
+      name: "RawWorkflowPackageCreated"
+      schemaUri: "https://sv.telesv.com/schemas/RawWorkflowPackageCreated_v1.001.json"
+      commands:
+        CompileWorkflowPackage:
+          name: "CompileWorkflowPackage"
+          schemaUri: "https://sv.telesv.com/schemas/CompileWorkflowPackage_v1.001.json"
+          roles:
+            - "TELETRACKING_BEST_PRACTICE_DEFINITION_ADMINISTRATOR"
+    RawWorkflowPackageUpdated:
+      name: "RawWorkflowPackageUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/RawWorkflowPackageUpdated_v1.001.json"
+      commands:
+        CompileWorkflowPackage:
+          name: "CompileWorkflowPackage"
+          schemaUri: "https://sv.telesv.com/schemas/CompileWorkflowPackage_v1.001.json"
+          roles:
+            - "TELETRACKING_BEST_PRACTICE_DEFINITION_ADMINISTRATOR"
+    RawWorkflowPackageDeleted:
+      name: "RawWorkflowPackageDeleted"
+      schemaUri: "https://sv.telesv.com/schemas/RawWorkflowPackageDeleted_v1.001.json"
+      commands:
+        CompileWorkflowPackage:
+          name: "CompileWorkflowPackage"
+          schemaUri: "https://sv.telesv.com/schemas/CompileWorkflowPackage_v1.001.json"
+          roles:
+            - "TELETRACKING_BEST_PRACTICE_DEFINITION_ADMINISTRATOR"

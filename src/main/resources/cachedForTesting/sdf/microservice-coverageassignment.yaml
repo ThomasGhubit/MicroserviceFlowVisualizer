@@ -1,0 +1,46 @@
+---
+name: "CoverageAssignment"
+type: "transactional"
+version: "1.0.0"
+consumes:
+    events:
+        UnitCoverageCreated:
+            name: "UnitCoverageCreated"
+            schemaUri: "https://sv.telesv.com/schemas/UnitCoverageCreated_v1.001.json"
+        UnitCreatedEvent:
+            name: "UnitCreatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/UnitCreatedEvent_v1.004.json"
+        StaffCreatedEvent:
+            name: "StaffCreatedEvent"
+            schemaUri: "https://sv.telesv.com/schemas/StaffCreatedEvent_v2.002.json"
+        CoverageDefinitionCreated:
+            name: "CoverageDefinitionCreated"
+            schemaUri: "https://sv.telesv.com/schemas/CoverageDefinitionCreated_v1.001.json"
+        UnitCoverageUpdated:
+            name: "UnitCoverageUpdated"
+            schemaUri: "https://sv.telesv.com/schemas/UnitCoverageUpdated_v1.001.json"
+    commands:
+        CreateUnitCoverage:
+            name: "CreateUnitCoverage"
+            schemaUri: "https://sv.telesv.com/schemas/CreateUnitCoverage_v1.001.json"
+            roles:
+                - "Administrator"
+            domainEvent:
+                name: "UnitCoverageCreated"
+                schemaUri: "https://sv.telesv.com/schemas/UnitCoverageCreated_v1.001.json"
+            events:
+                CreateUnitCoverageFailed:
+                    name: "CreateUnitCoverageFailed"
+                    schemaUri: "https://sv.telesv.com/schemas/CreateUnitCoverageFailed_v1.001.json"
+        UpdateUnitCoverage:
+            name: "UpdateUnitCoverage"
+            schemaUri: "https://sv.telesv.com/schemas/UpdateUnitCoverage_v1.001.json"
+            roles:
+                - "Administrator"
+            domainEvent:
+                name: "UnitCoverageUpdated"
+                schemaUri: "https://sv.telesv.com/schemas/UnitCoverageUpdated_v1.001.json"
+            events:
+                UpdateUnitCoverageFailed:
+                    name: "UpdateUnitCoverageFailed"
+                    schemaUri: "https://sv.telesv.com/schemas/UpdateUnitCoverageFailed_v1.001.json"

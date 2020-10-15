@@ -1,0 +1,51 @@
+---
+name: "AppointmentReadStore"
+type: "readstore"
+version: "1.0.0"
+consumes:
+  events:
+    AppointmentCreated:
+      name: "AppointmentCreated"
+      schemaUri: "https://sv.telesv.com/schemas/AppointmentCreated_v1.001.json"
+    AppointmentUpdated:
+      name: "AppointmentUpdated"
+      schemaUri: "https://sv.telesv.com/schemas/AppointmentUpdated_v1.001.json"
+    PatientArrivedForAppointment:
+      name: "PatientArrivedForAppointment"
+      schemaUri: "https://sv.telesv.com/schemas/PatientArrivedForAppointment_v1.001.json"
+    PatientCreatedEvent:
+      name: "PatientCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientCreatedEvent_v1.001.json"
+    PatientUpdatedEvent:
+      name: "PatientUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientUpdatedEvent_v1.001.json"
+    PatientProcedureCreatedEvent:
+      name: "PatientProcedureCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientProcedureCreatedEvent_v1.001.json"
+    PatientProcedureUpdatedEvent:
+      name: "PatientProcedureUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/PatientProcedureUpdatedEvent_v1.001.json"
+    FacilityCreatedEvent:
+      name: "FacilityCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCreatedEvent_v1.001.json"
+    FacilityUpdatedEvent:
+      name: "FacilityUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/FacilityUpdatedEvent_v1.001.json"
+    RoomCreatedEvent:
+      name: "RoomCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/RoomCreatedEvent_v1.001.json"
+    RoomUpdatedEvent:
+      name: "RoomUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/RoomUpdatedEvent_v1.001.json"
+    BedLocationCreatedEvent:
+      name: "BedLocationCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationCreatedEvent_v1.001.json"
+    BedLocationUpdatedEvent:
+      name: "BedLocationUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationUpdatedEvent_v1.001.json"
+    UnitCreatedEvent:
+      name: "UnitCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UnitCreatedEvent_v1.001.json"
+    UnitUpdatedEvent:
+      name: "UnitUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UnitUpdatedEvent_v1.001.json"

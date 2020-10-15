@@ -1,0 +1,41 @@
+---
+name: "SimilarRequestReadstore"
+type: "readstore"
+version: "1.0.0"
+consumes:
+    events:
+        DeliveryJobCreated:
+            name: "DeliveryJobCreated"
+            schemaUri: "https://sv.telesv.com/schemas/DeliveryJobCreated_v2.001.json"
+        CreateDeliveryJobFailed:
+            name: "CreateDeliveryJobFailed"
+            schemaUri: "https://sv.telesv.com/schemas/CreateDeliveryJobFailed_v3.001.json"
+        TaskDefinitionAttributeCategoryCreated:
+            name: "TaskDefinitionAttributeCategoryCreated"
+            schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionAttributeCategoryCreated_v1.001.json"
+        TaskDefinitionCreated:
+            name: "TaskDefinitionCreated"
+            schemaUri: "https://sv.telesv.com/schemas/TaskDefinitionCreated_v1.001.json"
+        PickupJobCreated:
+            name: "PickupJobCreated"
+            schemaUri: "https://sv.telesv.com/schemas/PickupJobCreated_v2.001.json"
+        CreatePickupJobFailed:
+            name: "CreatePickupJobFailed"
+            schemaUri: "https://sv.telesv.com/schemas/CreatePickupJobFailed_v3.001.json"
+        ServiceJobCreated:
+            name: "ServiceJobCreated"
+            schemaUri: "https://sv.telesv.com/schemas/ServiceJobCreated_v2.001.json"
+        CreateServiceJobFailed:
+            name: "CreateServiceJobFailed"
+            schemaUri: "https://sv.telesv.com/schemas/CreateServiceJobFailed_v3.001.json"
+        StaffJobCreated:
+            name: "StaffJobCreated"
+            schemaUri: "https://sv.telesv.com/schemas/StaffJobCreated_v2.001.json"
+        CreateStaffJobFailed:
+            name: "CreateStaffJobFailed"
+            schemaUri: "https://sv.telesv.com/schemas/CreateStaffJobFailed_v3.001.json"
+    commands:
+        GetSimilarRequestDetails:
+            name: "GetSimilarRequestDetails"
+            schemaUri: "https://sv.telesv.com/schemas/GetSimilarRequestDetails_v1.001.json"
+            viewModelSchemaUri: "https://sv.telesv.com/schemas/SimilarRequestDetailsViewModel_v3.001.json"

@@ -1,0 +1,13 @@
+---
+name: "Authentication"
+type: "readstore"
+version: "0.0.1"
+
+consumes:
+  events:
+    UserCreatedEvent:
+      name: "UserCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UserCreatedEvent_v1.002.json"
+    UserUpdatedEvent:
+      name: "UserUpdatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/UserUpdatedEvent_v1.002.json"
