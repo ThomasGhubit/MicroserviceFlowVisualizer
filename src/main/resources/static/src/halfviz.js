@@ -148,7 +148,17 @@
 
 
   $(document).ready(function(){
-    var mcp = HalfViz("#halfviz")    
+    $.ajax({
+      // url: "/visualize"
+      url: "/model/visulaize.json"
+    }).then(function(data) {
+      console.log("DATA +++")
+      console.log(data)
+      var mcp = HalfViz("#halfviz")
+    });
+
+    // var mcp = HalfViz("#halfviz")
+
   })
 
   
