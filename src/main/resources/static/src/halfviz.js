@@ -44,29 +44,28 @@
         $(that.io).bind('clear', that.newDoc)
         return that
       },
-      
+
       getDoc:function(e){
-        $.getJSON('model/'+e.id+'.json', function(doc){
-
-          // update the system parameters
-          if (doc.sys){
-            sys.parameters(doc.sys)
-            that.dashboard.update()
-          }
-
-          // modify the graph in the particle system
-          _code.val(doc.src)
-          that.updateGraph()
-          that.resize()
-          _editing = false
-        })
-        
+        // $.getJSON('model/'+e.id+'.json', function(doc){
+        //
+        //   // update the system parameters
+        //   if (doc.sys){
+        //     sys.parameters(doc.sys)
+        //     that.dashboard.update()
+        //   }
+        //
+        //   // modify the graph in the particle system
+        //   _code.val(doc.src)
+        //   that.updateGraph()
+        //   that.resize()
+        //   _editing = false
+        // })
       },
 
+      graph:null,
+
       newDoc:function(){
-        var lorem = "; some example nodes\nhello {color:red, label:HELLO}\nworld {color:orange}\n\n; some edges\nhello -> world {color:yellow}\nfoo -> bar {weight:5}\nbar -> baz {weight:2}"
-        
-        _code.val(lorem).focus()
+        _code.val(that.graph.src).focus()
         $.address.value("")
         that.updateGraph()
         that.resize()
@@ -148,16 +147,15 @@
 
 
   $(document).ready(function(){
+    var mcp = HalfViz("#halfviz");
+
     $.ajax({
       // url: "/visualize"
       url: "/model/visulaize.json"
     }).then(function(data) {
-      console.log("DATA +++")
-      console.log(data)
-      var mcp = HalfViz("#halfviz")
+      mcp.graph = data;
+      mcp.newDoc();
     });
-
-    // var mcp = HalfViz("#halfviz")
 
   })
 
