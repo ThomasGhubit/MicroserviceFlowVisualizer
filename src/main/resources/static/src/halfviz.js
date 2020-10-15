@@ -5,7 +5,7 @@
 // and maintains the canvas/editor splitview
 //
 (function(){
-  
+
   trace = arbor.etc.trace
   objmerge = arbor.etc.objmerge
   objcopy = arbor.etc.objcopy
@@ -17,22 +17,22 @@
     sys = arbor.ParticleSystem(2600, 512, 0.5)
     sys.renderer = Renderer("#viewport") // our newly created renderer will have its .init() method called shortly by sys...
     sys.screenPadding(20)
-    
+
     var _ed = dom.find('#editor')
     var _code = dom.find('textarea')
     var _canvas = dom.find('#viewport').get(0)
     var _grabber = dom.find('#grabber')
-    
+
     var _updateTimeout = null
     var _current = null // will be the id of the doc if it's been saved before
     var _editing = false // whether to undim the Save menu and prevent navigating away
     var _failures = null
-    
+
     var that = {
       dashboard:Dashboard("#dashboard", sys),
       io:IO("#editor .io"),
       init:function(){
-        
+
         $(window).resize(that.resize)
         that.resize()
         that.updateLayout(Math.max(1, $(window).width()-340))
@@ -44,7 +44,7 @@
         $(that.io).bind('clear', that.newDoc)
         return that
       },
-      
+
       getDoc:function(e){
         $.getJSON('model/'+e.id+'.json', function(doc){
 
@@ -60,12 +60,12 @@
           that.resize()
           _editing = false
         })
-        
+
       },
 
       newDoc:function(){
         var lorem = "; some example nodes\nhello {color:red, label:HELLO}\nworld {color:orange}\n\n; some edges\nhello -> world {color:yellow}\nfoo -> bar {weight:5}\nbar -> baz {weight:2}"
-        
+
         _code.val(lorem).focus()
         $.address.value("")
         that.updateGraph()
@@ -82,14 +82,14 @@
         sys.merge(network)
         _updateTimeout = null
       },
-      
-      resize:function(){        
+
+      resize:function(){
         var w = $(window).width() - 40
         var x = w - _ed.width()
         that.updateLayout(x)
         sys.renderer.redraw()
       },
-      
+
       updateLayout:function(split){
         var w = dom.width()
         var h = _grabber.height()
@@ -108,10 +108,10 @@
         _canvas.width = canvW
         _canvas.height = canvH
         sys.screenSize(canvW, canvH)
-                
+
         _code.css({height:h-20,  width:edW-4, marginLeft:2})
       },
-      
+
       grabbed:function(e){
         $(window).bind('mousemove', that.dragged)
         $(window).bind('mouseup', that.released)
@@ -132,18 +132,18 @@
         if ($.inArray(c, [37, 38, 39, 40, 16])>=0){
           return
         }
-        
+
         if (!_editing){
           $.address.value("")
         }
         _editing = true
-        
+
         if (_updateTimeout) clearTimeout(_updateTimeout)
         _updateTimeout = setTimeout(that.updateGraph, 900)
       }
     }
-    
-    return that.init()    
+
+    return that.init()
   }
 
 
@@ -152,14 +152,18 @@
       // url: "/visualize"
       url: "/model/visulaize.json"
     }).then(function(data) {
-      console.log("DATA +++")
-      console.log(data)
+
+      var browserify = require('browserify-fs');
+      var b = browserify();
+      b.add('/model/visualize.json');
+
+    })
+
       var mcp = HalfViz("#halfviz")
+
     });
 
-    // var mcp = HalfViz("#halfviz")
-
-  })
+  // })
 
   
 })()
