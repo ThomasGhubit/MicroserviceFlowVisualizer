@@ -82,9 +82,9 @@ class EngineImpl implements Engine {
 
     private Stream<Edge> buildOutputEdges( ServiceDescription service ) {
         return Stream.concat(
-            service.getDefinition().getProducedEvents().stream().map( SdfEvent::getName ),
-            service.getDefinition().getProducedCommands().stream().map( SdfCommand::getName )
-        )
+                service.getDefinition().getProducedEvents().stream().map( SdfEvent::getName ),
+                service.getDefinition().getProducedCommands().stream().map( SdfCommand::getName )
+            )
             .map( name -> new Edge( service.getId(), name ) );
     }
 

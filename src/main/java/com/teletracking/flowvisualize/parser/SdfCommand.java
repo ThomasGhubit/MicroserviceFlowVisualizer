@@ -1,9 +1,13 @@
 package com.teletracking.flowvisualize.parser;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class SdfCommand {
 
@@ -72,7 +76,14 @@ public class SdfCommand {
     }
 
     public Set<SdfEvent> getProducedEvents() {
-        return new HashSet<>( events.values() );
+        return Stream.concat(
+                Optional.ofNullable( domainEvent ).stream(),
+                Optional.ofNullable( events )
+                    .map( Map::values )
+                    .orElse( Collections.emptySet() )
+                    .stream()
+            )
+            .collect( Collectors.toSet() );
     }
 
 }

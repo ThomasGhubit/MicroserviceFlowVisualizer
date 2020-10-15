@@ -1,7 +1,9 @@
 package com.teletracking.flowvisualize.parser;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 
 public class SdfEvent {
@@ -35,7 +37,10 @@ public class SdfEvent {
     }
 
     public Set<SdfCommand> getProducedCommands() {
-        return new HashSet<>( commands.values() );
+        return Optional.ofNullable( commands )
+            .map( Map::values )
+            .map( collection -> (Set<SdfCommand>) new HashSet<>( collection ) )
+            .orElse( Collections.emptySet() );
     }
 
 }
