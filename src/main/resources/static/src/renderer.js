@@ -82,11 +82,6 @@
             ctx.lineWidth = (!isNaN(weight)) ? parseFloat(weight) : 1
             ctx.strokeStyle = (color) ? color : "#cccccc"
 
-
-            ctx.fillStyle = "black";
-            ctx.font = 'italic 13px sans-serif';
-            ctx.fillText (edge.data.name, (pt1.x + pt2.x) / 2, (pt1.y + pt2.y) / 2);
-
             ctx.moveTo(tail.x, tail.y)
             ctx.lineTo(head.x, head.y)
             ctx.stroke()

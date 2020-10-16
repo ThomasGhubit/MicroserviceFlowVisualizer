@@ -1,0 +1,46 @@
+---
+name: "PatientLocation"
+type: "transactional"
+version: "2.0.0"
+consumes:
+  events:
+    PatientLocationChanged:
+      name: "PatientLocationChanged"
+      schemaUri: "https://sv.telesv.com/schemas/PatientLocationChanged_v1.001.json"
+    PatientCreatedEvent:
+      name: PatientCreatedEvent
+      schemaUri: "https://sv.telesv.com/schemas/PatientCreatedEvent_v1.001.json"
+    UnitCreatedEvent:
+      name: UnitCreatedEvent
+      schemaUri: "https://sv.telesv.com/schemas/UnitCreatedEvent_v1.004.json"
+    UnitDeletedEvent:
+      name: UnitDeletedEvent
+      schemaUri: "https://sv.telesv.com/schemas/UnitDeletedEvent_v1.001.json"
+    FacilityCreatedEvent:
+      name: FacilityCreatedEvent
+      schemaUri: "https://sv.telesv.com/schemas/FacilityCreatedEvent_v1.003.json"
+    FacilityDeletedEvent:
+      name: FacilityDeletedEvent
+      schemaUri: "https://sv.telesv.com/schemas/FacilityDeletedEvent_v1.001.json"
+    BedLocationCreatedEvent:
+      name: BedLocationCreatedEvent
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationCreatedEvent_v2.001.json"
+    BedLocationDeletedEvent:
+      name: BedLocationDeletedEvent
+      schemaUri: "https://sv.telesv.com/schemas/BedLocationDeletedEvent_v1.001.json"
+    RoomCreatedEvent:
+      name: RoomCreatedEvent
+      schemaUri: "https://sv.telesv.com/schemas/RoomCreatedEvent_v1.003.json"
+    RoomDeletedEvent:
+      name: RoomDeletedEvent
+      schemaUri: "https://sv.telesv.com/schemas/RoomDeletedEvent_v1.001.json"
+    DepartmentCreatedEvent:
+      name: "DepartmentCreatedEvent"
+      schemaUri: "https://sv.telesv.com/schemas/DepartmentCreatedEvent_v1.002.json"
+  commands:
+    UpdatePatientLocation:
+      name: "UpdatePatientLocation"
+      schemaUri: "https://sv.telesv.com/schemas/UpdatePatientLocation_v2.001.json"
+      domainEvent:
+        name: "PatientLocationChanged"
+        schemaUri: "https://sv.telesv.com/schemas/PatientLocationChanged_v1.001.json"
