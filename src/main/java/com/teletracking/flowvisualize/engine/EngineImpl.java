@@ -5,6 +5,8 @@ import com.teletracking.flowvisualize.parser.SdfEvent;
 import com.teletracking.flowvisualize.parser.ServiceDescription;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -36,31 +38,31 @@ class EngineImpl implements Engine {
     }
 
     private Node buildServiceNode( ServiceDescription service ) {
-        return buildNode( service.getId(), service.getName(), NodeColor.SERVICE );
+        return buildNode( service.getId(), service.getName(), "service" );
     }
 
     private Stream<Node> buildEventNodes( ServiceDescription service ) {
         return service.getDefinition().getAllEvents().stream()
             .map( SdfEvent::getName )
-            .map( eventName -> buildNode( eventName, NodeColor.EVENT ) );
+            .map( eventName -> buildNode( eventName, "event" ) );
     }
 
     private Stream<Node> buildCommandNodes( ServiceDescription service ) {
         return service.getDefinition().getAllCommands().stream()
             .map( SdfCommand::getName )
-            .map( commandName -> buildNode( commandName, NodeColor.COMMAND ) );
+            .map( commandName -> buildNode( commandName, "command" ) );
     }
 
-    private Node buildNode( String name, NodeColor color ) {
-        return buildNode( name, name, color );
+    private Node buildNode( String name, String nodeType ) {
+        return buildNode( name, name, nodeType );
     }
 
-    private Node buildNode( String id, String name, NodeColor color ) {
+    private Node buildNode( String id, String name, String nodeType ) {
         return new Node(
             id,
             new Style(
                 name,
-                color.color
+                Collections.singletonList( nodeType )
             )
         );
     }
